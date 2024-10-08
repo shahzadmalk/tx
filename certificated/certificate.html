@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="../logo bg.png">
+    <title>Green Certified/texman</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for styling */
+   
+
+    section#quality-management {
+      background-color: white;
+      color: #333;
+      padding: 4rem 0;
+    }
+
+    .content-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c318f;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .highlight {
+      color: #2c318f;
+      font-weight: bold;
+    }
+
+    .card {
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-icon {
+      font-size: 6.5rem;
+      color: #2c318f;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+
+
+<body style="overflow-x: hidden">
+
+    <style>
+        /* OC top header bar styling */
+        .oc-top-bar {
+            background-color: #2C318F; /* Dark blue background */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between; /* Align elements at both ends */
+            align-items: center;
+            z-index: 9999; /* Ensure top bar is always visible */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+        }
+    
+        .oc-social-icons {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .oc-social-icons a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .oc-social-icons a:hover {
+            color: #eeeeee; /* Gold color on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+    
+        .oc-contact-info {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info span {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info i {
+            margin-right: 8px;
+            color: #fffffc; /* Gold color for icons */
+        }
+    
+        /* Responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            .oc-top-bar {
+                flex-direction: column; /* Stack items vertically */
+                text-align: center; /* Center align text and icons */
+                padding: 10px 0;
+            }
+    
+            .oc-social-icons {
+                justify-content: center; /* Center the social icons */
+                margin-bottom: 10px;
+            }
+    
+            .oc-contact-info {
+                justify-content: center; /* Center the contact info */
+                gap: 15px; /* Reduce gap on mobile */
+                font-size: 14px; /* Slightly smaller font size for mobile */
+            }
+        }
+    </style>
+    
+    <!-- OC Top header bar -->
+    <div class="oc-top-bar">
+        <div class="oc-social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    
+        <div class="oc-contact-info">
+            <span><i class="fa fa-phone"></i> +86 153 6280 0214</span>
+            <span><i class="fa fa-envelope"></i> sales@texman.net</span>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Main Header -->
+    <br> <br> <br> 
+
+    <header class="header" id="header">
+        <nav class="navbar container-fluid" style="height: auto">
+            <section class="navbar__left position-relative top-50">
+                <a class="navbar-brand" href="../index.html" style="height: auto">
+                    <img src="../logo.png" width="136" alt="Logo" height="auto"
+                        style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px" /></a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span><span
+                            class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item">
+                            <a href="../index.html" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Business Area <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__text">
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile Dyes</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="../Reactive.html">Reactive Dyes</a></li>
+                                        <li><a href="../Dispers dyes/dispers.html">Disperse Dyes</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile Auxiliary</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="../Auxiliary/Auxiliary.html">Textile Auxiliary</a></li>
+                                        <!-- <li><a href="../Auxiliary/Auxiliary.html#profile-v">Dyeing Series</a></li>
+                                        <li><a href="../Auxiliary/Auxiliary.html#">Finishing Series</a></li> -->
+                                    </ul>
+                                </div>
+
+                                <!-- <div class="submenu__inner">
+                                    <h4 class="submenu__title">Organic Matrials</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">Displays</a></li>
+                                        <li><a href="#">Functional Matrials</a></li>
+                                        <li><a href="#">Custom Synthesis</a></li>
+                                        <li><a href="#">Pigments</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </li>
+
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Certifications</a>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="../index.html#about" class="menu__link">
+                                Our Company </a>
+                           
+                        </li>
+                       
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Sustainability <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="#Quality" >Quality Management</a></li>
+                                    <li><a href="#Sustainability" >Sustainability and Safety</a></li>
+
+                                  
+                                </ul>
+                               
+                            </div>
+                        </li>
+                        <!-- <li class="menu__item">
+                            <a href="#" class="menu__link">Support</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <!-- Start: NMDIGbanner -->
+    <div style="padding-top: 100px" >
+        <!-- Start: Header -->
+        <div class="header-blue" style="
+            background-image: url('./Untitled\ design\ \(6\).png');
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 70vh; 
+          ">
+          <!-- <div class="row">
+            <div style="margin-top: 100px;">
+              <p style="
+                  width: 96%;
+                  color: rgb(255, 253, 253);
+                  margin-bottom: 100px;
+                  height: auto;
+                ">
+              </p>
+            </div>
+          </div> -->
+        </div>
+        <!-- End: Header -->
+      </div>
+      
+     
+ 
+
+<h1 class="content-title bg-body-secondary" id="Quality" >Our Commitment to Quality Management</h1>
+<!-- Quality Management Section -->
+<section id="quality-management">
+    <div class="container">
+      <div class="row text-center">
+        <!-- Card 1: Raw Material Selection -->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-3">
+            <i class="bi bi-box-seam card-icon"></i>
+            <h5 class="highlight">Raw Material Inspection</h5>
+            <p class="card-text">We ensure every batch of raw chemicals is inspected for purity and compliance with industry standards before production begins.</p>
+          </div>
+        </div>
+  
+        <!-- Card 2: In-Process Monitoring -->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-3">
+            <i class="bi bi-tools card-icon"></i>
+            <h5 class="highlight">In-Process Monitoring</h5>
+            <p class="card-text">Throughout production, key parameters like pH levels and temperature are continuously monitored for consistency.</p>
+          </div>
+        </div>
+  
+        <!-- Card 3: Product Testing -->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-3">
+            <i class="bi bi-clipboard-check card-icon"></i>
+            <h5 class="highlight">Product Testing</h5>
+            <p class="card-text">Each batch undergoes rigorous testing for stability and performance, ensuring compliance with regulatory standards.</p>
+          </div>
+        </div>
+  
+        <!-- Card 4: Batch Consistency -->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-3">
+            <i class="bi bi-bar-chart card-icon"></i>
+            <h5 class="highlight">Batch Consistency</h5>
+            <p class="card-text" id="Sustainability">We ensure uniformity across all batches, ensuring that the same level of quality is maintained in each product.</p>
+           
+          </div>
+          
+        </div>
+      </div>
+  </section>
+
+ 
+<!-- ------------------------  -->
+<section id="sustainability-safety" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="content-title text-center">Sustainability and Safety</h2>
+      <div class="row text-center">
+        <!-- Sustainability Card -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 p-3">
+            <i class="bi bi-recycle card-icon"></i> <!-- Updated Icon -->
+            <h5 class="highlight">Sustainability</h5>
+            <p class="card-text">We prioritize environmentally friendly practices, adhering to global standards like <span class="highlight">OEKO-TEX</span> to ensure our textile chemicals are safe for the environment and end users.</p>
+          </div>
+        </div>
+  
+        <!-- Safety Card -->
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 p-3">
+            <i class="bi bi-file-earmark-lock card-icon"></i> <!-- Updated Icon -->
+            <h5 class="highlight">Safety Standards</h5>
+            <p class="card-text">Our products comply with <span class="highlight">REACH</span> regulations, ensuring safety for workers, consumers, and the environment throughout all production stages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- ----------------slide ------  -->
+<!-- Bootstrap Slider (Carousel) -->
+<section id="video-section" class="py-5 bg-light">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <!-- <h2 class="mb-4">Our Product Video</h2> -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <video class="embed-responsive-item w-100" autoplay muted loop>
+            <source src="../assets/LETTER.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+          </video>
+        </div>
+     
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
+  
+  
+ 
+  
+
+
+
+   <!-- footer ========================  -->
+
+    <br><br> <br><br>
+<!-- Footer with Unique ID -->
+<div class="container-fluid"></div> 
+<div class="container-fluid"></div>
+<div class="container-fluid p-0 m-0"></div>
+    <!-- Bootstrap Footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: rgb(33, 30, 59);">
+        <div class="container-fluid pt-3">
+            <div class="row text-center text-md-left m-0">
+    
+                <!-- Logo and Social Media Section -->
+                <div class="col-md-4  d-flex flex-column align-items-center" style="background-color: rgb(33, 30, 59);">
+                    <a href="./index.html">
+                        <img src="../logo bg.png" width="138px" height="auto" alt="Texman Logo" class="img-fluid mb-3">
+                    </a>
+                    <p style="font-size: 14px; text-align: center;">
+                        The initial development of Dongguan Texman Textile Technology Co., Ltd. products was focused on knitted fabric dyeing.
+                    </p>
+                    <h5 class="text-light mb-4"style="font-size: 2.25rem; font-weight: bold;">Find us on social media</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                    <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Quick Links</h5>
+                    <p><a href="../index.html" class="text-white">Home</a></p>
+                    <p><a href="../certificated/certificate.html" class="text-white">Certifications</a></p>
+                    <p><a href="../index.html#about" class="text-white">Our Company</a></p>
+                    <p><a href="../index.html#contacts" class="text-white">Contact Us</a></p>
+                </div>
+    
+                <!-- Business Area Section -->
+                <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                    <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Business Area</h5>
+                    <p><a href="../Dispers dyes/dispers.html" class="text-white">Disperse Dyes</a></p>
+                    <p><a href="../Reactive.html" class="text-white">Reactive Dyes</a></p>
+                    <p><a href="../Auxiliary/Auxiliary.html" class="text-white">Textile Auxiliaries</a></p>
+                </div>
+    
+                <!-- Sustainability Section -->
+                <div class="col-md-2" style="background-color: rgb(33, 30, 59);">
+                    <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Sustainability</h5>
+                    <p><a href="../certificated/certificate.html#Quality" class="text-white">Quality Management</a></p>
+                    <p><a href="../certificated/certificate.html#Sustainability" class="text-white">Sustainability and Safety</a></p>
+                </div>
+            </div>
+    
+            <hr class="mb-4">
+    
+            <!-- Copyright Section -->
+            <div class="row align-items-center" style="background-color: rgb(33, 30, 59);">
+                <div class="col-md-12 text-center">
+                    <p style="font-size: 1.1rem;">Copyright © 2024 
+                        <a href="https://texman.net/" class="text-white font-weight-bold">TEXMAN</a> All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+
+    <!-- <style>
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+        }
+        a {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+    </style> -->
+</div>
+
+<!-- social icon -------------------------------  -->
+<div class="social-icons">
+
+    <a href="https://texman.net/#" target="_blank" title="Chat with us on WeChat" class="social-icon wechat-icon">
+
+        <img src="../wecht.png" alt="WeChat Icon" class="social-img">
+        <img src="../barcode texman.png" alt="WeChat Barcode" class="tooltip-img">
+    </a>
+
+    <a href="https://api.whatsapp.com/send?phone=++8615362800214&text=Well+come+to+my+inbox" target="_blank"
+        title="Chat with us on WhatsApp" class="social-icon">
+        <img src="../watsup.png" style="border-radius: 10px;" alt="WhatsApp Icon" class="social-img">
+    </a>
+</div>
+
+<style>
+    .social-icons {
+        position: fixed;
+        right: 0;
+        top: 70%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        /* Space between icons */
+        z-index: 1000;
+        /* Ensure icons are above other content */
+    }
+
+    .social-icon {
+        position: relative;
+        display: block;
+        text-decoration: none;
+    }
+
+    .social-icon .social-img {
+        width: 56px;
+        /* Adjust to match your icon size */
+        height: 56px;
+        /* Adjust to match your icon size */
+        display: block;
+        z-index: 10;
+        /* Ensure the icon is above other elements */
+    }
+
+    .social-icon .tooltip-img {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        /* Adjust this value to position the image */
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, right 0.3s ease;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        max-width: 150px;
+        /* Adjust size as needed */
+        height: auto;
+        z-index: 20;
+        /* Ensure the tooltip is above the icon */
+    }
+
+    .social-icon.wechat-icon:hover .tooltip-img {
+        opacity: 1;
+        visibility: visible;
+        right: 20px;
+        /* Shifts image left by 20px on hover */
+    }
+</style>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.min.js?h=ee49e4b421a33c2774a60d2276cb9bf9"></script>
+</body>
+
+</html>

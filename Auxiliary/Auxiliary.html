@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="../logo bg.png">
+    <title>Auxiliary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<style>
+
+a {
+  text-decoration: none;
+}
+    .tab-pane img {
+        height: 150px;
+        width: 100%;
+        border-radius: 60px;
+    }
+
+    .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%; /* Adjust as needed */
+            background-color: #f8f9fa; /* Optional: background color */
+            padding: 10px; /* Optional: padding around the marquee */
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .marquee-content > div {
+            margin-right: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-content img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* Rounded corners for images */
+            transition: transform 0.3s ease;
+        }
+
+        .marquee-content img:hover {
+            transform: scale(1.1); /* Slightly zoom in on hover */
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+    .nav-tabs>li {
+        float: none;
+        /* Make sure tabs are not floating */
+        display: block;
+        /* Stack them vertically */
+        width: 70%;
+    }
+</style>
+ 
+<body style="overflow-x: hidden">
+    
+
+    <style>
+        header.header {
+    margin-top: 80px;
+}
+
+        /* OC top header bar styling */
+        .oc-top-bar {
+            background-color: #2C318F; /* Dark blue background */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between; /* Align elements at both ends */
+            align-items: center;
+            z-index: 9999; /* Ensure top bar is always visible */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+        }
+    
+        .oc-social-icons {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .oc-social-icons a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .oc-social-icons a:hover {
+            color: #eeeeee; /* Gold color on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+    
+        .oc-contact-info {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info span {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info i {
+            margin-right: 8px;
+            color: #fffffc; /* Gold color for icons */
+        }
+    
+        /* Responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            .oc-top-bar {
+                flex-direction: column; /* Stack items vertically */
+                text-align: center; /* Center align text and icons */
+                padding: 10px 0;
+            }
+    
+            .oc-social-icons {
+                justify-content: center; /* Center the social icons */
+                margin-bottom: 10px;
+            }
+    
+            .oc-contact-info {
+                justify-content: center; /* Center the contact info */
+                gap: 15px; /* Reduce gap on mobile */
+                font-size: 14px; /* Slightly smaller font size for mobile */
+            }
+        }
+    </style>
+    
+    <!-- OC Top header bar -->
+    <div class="oc-top-bar">
+        <div class="oc-social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+        <div class="oc-contact-info">
+            <span><i class="fa fa-phone"></i> +86 153 6280 0214</span>
+            <span><i class="fa fa-envelope"></i> sales@texman.net</span>
+        </div>
+        
+    </div>
+    
+    
+    
+    <!-- Main Header -->
+   
+    <header class="header " id="header">
+       
+        <nav class="navbar container-fluid" style="height: auto; ">
+            <section class="navbar__left position-relative ">
+                <a class="navbar-brand" href="../index.html" style="height: auto">
+                    <img src="../logo.png" width="136" alt="Logo" height="auto"
+                        style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px" /></a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span><span
+                            class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item">
+                            <a href="../index.html" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Business Area <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__text">
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile Dyes</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="../Reactive.html">Reactive Dyes</a></li>
+                                        <li><a href="../Dispers dyes/dispers.html">Disperse Dyes</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile Auxiliary</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="../Auxiliary/Auxiliary.html#home-v">Textile Auxiliary</a></li>
+
+                                        <!-- <li><a href="../Auxiliary/Auxiliary.html#profile-v">Dyeing Series</a></li>
+                                        <li><a href="#">Finishing Series</a></li> -->
+                                    </ul>
+                                </div>
+
+                               
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../certificated/certificate.html" class="menu__link">Certifications</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../index.html#about" class="menu__link">Our Company</a>
+                        </li>
+                        <!-- <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Our Company <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__text">
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Overview</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#"> OUR VALUES &
+                                                CERTIFICATIONS</a></li>
+                                        <li><a href="#"> Our MISSION
+                                            </a></li>
+                                        <li><a href="#">Productoin</a></li>
+                                        <li><a href="#">R&amp;D</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">News</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#"> Publiation</a></li>
+                                        <li><a href="#"> FAQ</a></li>
+
+                                    </ul>
+                                </div>
+                                <!-=- <div class="submenu__inner">
+                                    <h4 class="submenu__title">Research</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">Displays</a></li>
+                                        <li><a href="#">Functional Matrials</a></li>
+                                        <li><a href="#">Custom Synthesis</a></li>
+                                    </ul>
+                                </div> -->
+                            <!-- </div> -->
+                        <!-- </li>  -->
+                       
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Sustainability <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="../certificated/certificate.html#Quality" >Quality Management</a></li>
+                                    <li><a href="../certificated/certificate.html#Sustainability" >Sustainability and Safety</a></li>
+
+                                  
+                                </ul>
+
+                                
+                            </div>
+                        </li>
+                        <!-- <li class="menu__item">
+                            <a href="../index.html#contacts" class="menu__link">Contact Us</a>
+                        </li> -->
+                    </ul> 
+                </div>
+            </section>
+        </nav>
+    </header>
+   
+   <!-- Start: NMDIGbanner -->
+<div style="height: auto; ">
+    <!-- Start: Header -->
+    <div class="header-blue" style="
+        background-image: url('./assets/img/Auxiliary img/d10.jpg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      ">
+        <!-- Subtle overlay for better readability -->
+        <div style="
+          background-color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        "></div>
+        <div class="row" style="position: relative; z-index: 2;">
+            <!-- Start: Text -->
+            <div class="col-md-6 col-lg-5 col-xl-5 offset-lg-1" style="
+              background-color: rgba(78, 70, 70, 0.87);
+              margin-top: 80px;
+              margin-left: 25px;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            ">
+                <h1 style="
+                margin-top: 25px;
+                margin-bottom: 15px;
+                color: #FCFCFC;
+                font-size: 48px;
+                line-height: 1.2;
+                font-family: 'Segoe UI', sans-serif;
+              ">
+                    Textile Auxiliaries
+                </h1>
+                <p style="
+                  color: #FFFDFD;
+                  margin-bottom: 25px;
+                  font-size: 18px;
+                  line-height: 1.6;
+                  font-family: 'Segoe UI', sans-serif;
+                ">
+                    Our relentless dedication to sustainability and innovation propels us to spearhead a remarkable
+                    revolution in the industry.
+                </p>
+            </div>
+            <!-- End: Text -->
+        </div>
+    </div>
+    <!-- End: Header -->
+</div>
+<!-- End: NMDIGbanner -->
+
+
+
+    <div class="col-md-12" style="padding-top: 10px">
+
+        <!-- marqueeeeeeeeeeeeee----------------------------=============  -->
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div>
+                    <img src="./assets/img/Auxiliary img/texman special s1.png" alt="Image 6">
+                </div>
+                <div>
+                    <img src="./assets/img/Auxiliary img/finshing s1.png" alt="Image 4">
+                </div>
+                <div>
+                    <img src="./assets/img/Auxiliary img/fatty s1.png" alt="Image 5">
+                </div>
+                <div>
+                    <img src="./assets/img/Auxiliary img/enzym s1.png" alt="Image 3">
+                </div>
+                <div>
+                    <img src="./assets/img/Auxiliary img/dying s1.png" alt="Image 2">
+                </div>
+                <div>
+                    <img src="./assets/img/Auxiliary img/textile pre treatment seris.png" alt="Image 1">
+                </div>
+                <div>
+                    <img src="./assets/img/Auxiliary img/texman.png" alt="Image 7">
+                </div>
+            </div>
+        </div>
+
+        <style>
+
+            
+            @keyframes scroll-left {
+                0% {
+                    transform: translateX(-100%);
+                }
+
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+        </style>
+
+
+
+
+
+
+
+
+        <!-- Start: PS Cinel cursos heading -->
+        <!-- <h1 class="section-heading bg-light" style="color: #446085">
+            Finshing Auxiliary
+        </h1> -->
+        <h1 style="width: 100%; color: aliceblue">
+            <!-- Textile Auxiliary -->
+        </h1>
+        <!-- <h1 class="display-3 text-uppercase" style="padding-right: 10px;padding-bottom: 10px;">CINEL cursos</h1> -->
+        <hr />
+        <!-- End: PS Cinel cursos heading -->
+        <!-- <hr > -->
+
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <ul class="nav nav-tabs tabs-left sideways">
+
+                        <li class="active">
+                            <a href="#home-v" style="border-radius: 8px" data-toggle="tab"> Pretreatment
+                                Series</a>
+                        </li>
+                        <li>
+                            <a href="#profile-v" style="border-radius: 8px" data-toggle="tab">Dyeing Series </a>
+                        </li>
+
+                        <li>
+                            <a href="#reactiv-v" style="border-radius: 8px" data-toggle="tab">Enzyme Series</a>
+                        </li>
+                        <li>
+                            <a href="#disperse-v" style="border-radius: 8px" data-toggle="tab">
+                                Finishing Series </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#HS-Series" style="border-radius: 8px" data-toggle="tab">
+                                Fatty Acid Flakes</a>
+                        </li> -->
+                        <!-- <li>
+                            <a href="#series-v" style="border-radius: 8px" data-toggle="tab">Texman Specialities
+                            </a>
+                        </li> -->
+                       
+
+                        <!-- <li>
+                            <a href="#series-TC" style="border-radius: 8px" data-toggle="tab">Trichromatic Combination
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#series-con" style="border-radius: 8px" data-toggle="tab">
+                                Continuous Dyeing Process Recommendation
+                            </a>
+                        </li> -->
+                        
+                        <!-- <li><a href="#series-v" style="border-radius:8px;" data-toggle="tab">100</a></li> -->
+                        <br><br><br><br> <br><br><br><br>
+                    </ul>
+                </div>
+                <!-- second column ------------------------======  -->
+                <div class="col-sm-4 col-lg-4 col-xs-12">
+                    <div class="tab-content" style="padding-top: 10px">
+                        <div class="tab-pane active" id="home-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #446085;
+                  ">
+                                Textile Pretreatment Series
+                            </h4>
+
+
+                            <img src="./assets/img/Auxiliary/pre tretment.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+
+
+                        </div>
+
+                        <!-- second 2 img============  -->
+                        <div class="tab-pane" id="profile-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color:#446085;
+                  ">
+                                Dyeing Series
+                            </h4>
+
+                            <img src="./assets/img/Auxiliary/dyng.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+
+                                <img src="./assets/img/Auxiliary img/d14.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+                          
+                              <h1></h1>
+                              <img src="./assets/img/Auxiliary img/dd.jpg"
+                              style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                              class="img-responsive" />
+                        </div>
+                        <!-- 3rd ================  -->
+                        <div class="tab-pane" id="reactiv-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #446085;
+                  ">Enzyme Series
+                            </h4>
+                            <img src="./assets/img/Auxiliary/enzyme.jpg"
+                            style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                            class="img-responsive" /> 
+                            <h1></h1>
+                            <img src="./assets/img/Auxiliary img/33.jpg"
+                            style="height: 350px; width: 100%; border-radius: 20px" alt="Dyes product image"
+                            class="img-responsive" /> 
+
+                           
+                        </div>
+
+
+                        <!-- 4th ==============================  -->
+                        <div class="tab-pane" id="disperse-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #446085;
+                  ">
+                                Finishing Series
+                            </h4>
+                        
+                                <img src="./assets/img/Auxiliary/finshing.jpg"
+                                     style="height: auto; width: 100%; border-radius: 20px; " 
+                                     alt="Dyes product image"
+                                     class="img-responsive" />
+
+                                     <img src="./assets/img/Auxiliary img/99.jpg"
+                                     style="height: auto; width: 100%; border-radius: 20px; " 
+                                     alt="Dyes product image"
+                                     class="img-responsive" />
+                           
+                            
+
+                        </div>
+
+                        <!-- 5th ========   =================  -->
+                        <div class="tab-pane" id="HS-Series">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color:#446085;
+                  ">
+                               Fatty Acid Flakes
+                            </h4>
+                            <img src="./assets/img/Auxiliary/fatty.jpg"
+                            style="height: auto; width: 100%; border-radius: 20px; " 
+                            alt="Dyes product image"
+                            class="img-responsive" />
+                        </div>
+
+                        <!-- 6yh medium ==================  -->
+                        <div class="tab-pane" id="series-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color:#446085;
+                  ">
+                                Texman Specialities
+                            </h4>
+
+                            <img src="./assets/img/Auxiliary/specialty.jpg"
+                            style="height: auto; width: 100%; border-radius: 20px; " 
+                            alt="Dyes product image"
+                            class="img-responsive" />
+
+                           <h1></h1>
+                           <img src="./assets/img/Auxiliary img/aa.jpg"
+                            style="height: 400px; width: 100%; border-radius: 20px; " 
+                            alt="Dyes product image"
+                            class="img-responsive" />
+                           
+
+
+
+                        </div>
+
+                        <!-- 7yh BI-D ==================  -->
+                        <div class="tab-pane" id="BI-D">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Bi-Functional Group D Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/b-f d series 2.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 8yh ==================  -->
+                        <div class="tab-pane" id="BI-HE">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Bi-Functional Group HE Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/HE1.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 9yh ================== Deep Shades ED-p Series -->
+                        <div class="tab-pane" id="BI-EDP">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Deep Shades ED-P Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/EDP series.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 10yh ==================EGB  -->
+                        <div class="tab-pane" id="series-EGB">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Deep Shades EGB Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/EGP1.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 10yh ================== Trichromatic Combination  -->
+                        <div class="tab-pane" id="series-TC">
+                            <h4 style="
+        color: rgb(246, 246, 247);
+        font-size: larger;
+        font-weight: bold;
+        border-radius: -47px;
+        width: 80%;
+        background-color: rgb(42, 47, 120);
+      ">
+                                Trichromatic Combination
+                            </h4>
+                            <img src="./assets/img/reactiv imges/TC.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <h1 style="width: 80%;"></h1>
+                            <img src="./assets/img/reactiv imges/TC1.png"
+                                style="height: auto; width:80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 10yh ==================EGB  -->
+                        <div class="tab-pane" id="series-con">
+                            <h4 style="
+        color: rgb(246, 246, 247);
+        font-size: larger;
+        font-weight: bold;
+        border-radius: -47px;
+        width: 80%;
+        background-color: rgb(42, 47, 120);
+      ">
+                                Continuous Dyeing Process Recommendation
+                            </h4>
+                            <img src="./assets/img/reactiv imges/cd process recommendation.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- second div collumn -->
+                <div class="col-sm-5 col-xs-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home-v-info">
+                            <!-- <h4 >Trichromatic Combination for light Shades with High Fastnesses Properties</h4> -->
+                          
+
+<style>
+    body {
+            background-color: #f8f9fa;
+            /* font-family: 'Times New Roman', serif; */
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1d3557;
+        }
+
+        .custom-table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .custom-table-header {
+            background-color: #457b9d;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .custom-table-row {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .custom-table-row:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-table-row h5 {
+            color: #1d3557;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .custom-table-row p {
+            color: #5c677d;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .custom-table-row ul {
+            padding-left: 15px;
+            list-style-type: disc;
+            margin-bottom: 0;
+        }
+
+        .custom-table-row ul li {
+            font-size: 0.9rem;
+            color: #343a40;
+        }
+
+        /* Make sure table is responsive */
+        .col-3, .col-4, .col-5 {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .col-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .col-5 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-4 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    </style>
+
+<div class="container mt-5">
+   
+    <!-- Table Header -->
+    <div class="row custom-table-header">
+        <div class="col-6">Product</div>
+        <div class="col-6">Description</div>
+        <!-- <div class="col-4">Advantages</div> -->
+    </div>
+    <!-- Product 1 -->
+    <div class="row custom-table-row">
+        <div class="col-6">
+            <h5>Wetting Agent TM-12A</h5>
+        </div>
+        <div class="col-6">
+            <p>High-efficiency surfactants, Nonionic, Transparent liquid</p>
+        </div>
+       
+    </div>
+    <!-- Product 2 -->
+    <div class="row custom-table-row">
+        <div class="col-6">
+            <h5>Oil Remover TM-295-3</h5>
+        </div>
+        <div class="col-6">
+            <p>Multi-functional pre-treatment chemical, Nonionic, Transparent viscous liquid</p>
+        </div>
+       
+    </div>
+    <!-- Product 3 -->
+    <div class="row custom-table-row">
+        <div class="col-6">
+            <h5>Sequestering Agent TM-295-6</h5>
+        </div>
+        <div class="col-6">
+            <p>Chelating and Dispersing Agent, Weakly anionic, Transparent liquid</p>
+        </div>
+        
+    </div>
+    <!-- Product 4 -->
+    <div class="row custom-table-row">
+        <div class="col-6">
+            <h5>Multi-functional Scouring Agent TM-293</h5>
+        </div>
+        <div class="col-6">
+            <p>Scouring Agent, Anion/Nonionic, Transparent liquid</p>
+        </div>
+       
+    </div>
+    <!-- Product 5 -->
+    <!-- <div class="row custom-table-row">
+        <div class="col-3">
+            <h5>Peroxide Stabilizer TM-100</h5>
+        </div>
+        <div class="col-5">
+            <p>Peroxide stabilizer, Nonionic, Transparent liquid</p>
+        </div>
+        <div class="col-4">
+            <ul>
+                <li>Used in bleaching process</li>
+                <li>Provides stable reaction condition</li>
+            </ul>
+        </div>
+    </div> -->
+</div>
+
+
+                        </div>
+                        <!-- 2=========================  -->
+                        <div class="tab-pane" id="profile-v-info">
+
+                            <div class="container mt-5">
+                                
+                                <!-- Table Header -->
+                                <div class="row custom-table-header">
+                                    <div class="col-6">Product</div>
+                                    <div class="col-6">Description</div>
+                                    <!-- <div class="col-4">Advantages</div> -->
+                                </div>
+                                <!-- Product 1 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Reduction Cleaning TM-15</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Advanced formulation of Reduction Cleaning Agent, Anionic, White powder</p>
+                                    </div>
+                                    <!-- <div class="col-4">
+                                        <ul>
+                                            <li>Better performance than traditional method of hydrosulphite RC</li>
+                                            <li>Cost-effective, energy-saving</li>
+                                            <li>No negative effect on fiber short process</li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                                <!-- Product 2 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Soda Ash Substitute SAS TM-88D</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Formulation of various inorganic alkali, buffer, and chelating agent, Cationic, White powder</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 3 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Leveling Agent E3R</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Suitable for reactive dyeing, Weak cationic, Transparent liquid</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 4 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Leveling Agent NC-110A</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Multifunctional leveling agent (Disperse Dyeing), Cationic/Nonionic, Transparent liquid</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <h1></h1>
+
+                            
+                            <div class="container mt-5">
+                                
+                                <!-- Table Header -->
+                                <div class="row custom-table-header">
+                                    <div class="col-6">Product</div>
+                                    <div class="col-6">Description</div>
+                                    <!-- <div class="col-4">Advantages</div> -->
+                                </div>
+                                <!-- Product 1 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Anti-Creasing <br>
+                                            Agent TM-09</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p> Weak cationice <br> White emulsion</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 2 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5> Anti-Creasing <br> Agent TM-28</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Cationic  <br>Yellowish liquid</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 3 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Wash Off <br> TM-294</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Wash Off (ReactiveDyeing) <br> Anionic</p>
+                                    </div>
+                                    <!-- <div class="col-4">
+                                        <ul>
+                                            <li>Has strong ability of antiback staning and signifi.cantly improve the color fastness of the fabrice 
+                                               
+                                                 </li>
+                                            <li> No phosphorus, environmental friendly</li>
+                                            <li>Low foam</li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                                <!-- Product 4 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5> Fixing Agent
+                                            TM-301-1</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Fixer (Reactive Dyeing) Cationice Brown liquid</p>
+                                    </div>
+                                    <!-- <div class="col-4">
+                                        <ul>
+                                            <li>lmprove color fastness to staninge
+                                                </li>
+                                                <li>lmprove wet rubbing fastness</li>
+                                            <li>lmprove the rating about 2 points</li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                            </div>
+                          
+                        </div>
+                       
+                        <!-- 3========  -->
+                        <div class="tab-pane" id="reactiv-v-info">
+
+                           
+                            <div class="container mt-5">
+                                <!-- <h2>Enzyme Series</h2> -->
+                                <!-- Table Header -->
+                                <div class="row custom-table-header">
+                                    <div class="col-6">Product</div>
+                                    <div class="col-6">Description</div>
+                                    <!-- <div class="col-6">Application/Advantages</div> -->
+                                </div>
+                                <!-- Product 1 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>De-Oxicam PK-933C (Catalase Enzyme)</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>High concentrated neutral catalase, Brown liquid</p>
+                                    </div>
+                                    <!-- <div class="col-6">
+                                        <ul>
+                                            <li>Specially developed to remove residual hydrogen peroxide</li>
+                                            <li>Can largely reduce hazardous chemicals usage and save water energy cost</li>
+                                            <li>Reduced processing time i.e. 15 mins</li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                                <!-- Product 2 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Desizing Enzyme DS-910 (Alpha Amylase Enzyme)</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Concentrated alpha amylase, Brown liquid</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 3 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Bio-Zyme NBP-18 (Biopolish Enzyme)</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>High concentrated neutral cellulase, Brownish powder</p>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Product 4 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Bio-Zyme NBP-909 (Biopolish Enzyme)</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Raw enzyme for formulator, High concentrated neutral cellulase, White to brown powder</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 5 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Bio-Clean CR TM-18 (Cellulase Enzymes)</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Neutral cellulase, Brown liquid</p>
+                                    </div>
+                                   
+                                </div>
+                                <!-- Product 6 -->
+                                <!-- <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Ultra-Clean RC-103 (Cellulase Enzymes)</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Acid cellulase, Brown liquid</p>
+                                    </div>
+                                   
+                                </div> -->
+                                <!-- Product 7 -->
+                                <div class="row custom-table-row">
+                                    <div class="col-6">
+                                        <h5>Anti Back Staining Agent TM-13</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Anion/Nonionic, Yellowish powder</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>                          
+                        </div>
+                        <!-- finshing series========  -->
+                        <div class="tab-pane arrow-list" id="disperse-v-info">
+                            <span>
+
+
+<!--                                
+                                <img src="./assets/img/Auxiliary/finshin1.jpg"
+                                    style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                                    class="img-responsive" /> -->
+
+                               
+                                  
+                                    <div class="container mt-5">
+                                        <!-- <h2>Enzyme Series</h2> -->
+                                        <!-- Table Header -->
+                                        <div class="row custom-table-header">
+                                            <div class="col-3">Product</div>
+                                            <div class="col-4">Description</div>
+                                            <div class="col-5">Application/Advantages</div>
+                                        </div>
+                                        <!-- Product 1 -->
+                                        <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5>TM-OP10-2C</h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Block Silicon Oil
+                                                    Weak cationice
+                                                    Milky emulsione
+                                                     Macro emulsion</p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li> Apply for knitted cotton and its blends</li>
+                                                    <li>Super soft and smooth hand feel</li>
+                                                    <li>Good stability in jet</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Product 2 -->
+                                        <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5>TM-904C</h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Hydrophilic Silicon Softener
+                                                    Weak cationic
+                                                     Transparent
+                                                     Micro emulsion
+                                                </p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li> Apply for knitted cotton and its blends,recommended for towel
+                                                       
+                                                        </li>
+                                                    <li> Soft hand feel and hydrophilicity</li>
+                                                    <li>Electrolyte stable</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Product 3 -->
+                                        <!-- <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5>TM-906-1</h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Hydrophilic Silicon Softener
+                                                    Weak cationic
+                                                    Milky emulsion
+                                                    Macro emulsion
+                                                </p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li> Apply for knitted cotton and its blends
+                                                       
+                                                        </li>
+                                                    <li> Soft hand feel and hydrophilicity</li>
+                                                    <li>Economical solution</li>
+                                                </ul>
+                                            </div>
+                                        </div> -->
+                                        <!-- Product 4 -->
+                                        <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5>TM-990</h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Hydrophilic Silicon Softener
+                                                    Weak cationic
+                                                    Milky emulsion
+                                                    Macro emulsion
+                                                </p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li>Apply for knitted cotton and its blends
+                                                       
+                                                         </li>
+                                                    <li> Soft hand feel and hydrophilicity</li>
+                                                    <li>Better stability and performance</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Product 5 -->
+                                        <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5>TM-1580-1</h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Block Silicon Oil
+
+                                                    Weak cationic/Nonionic
+                                                    SM emulsion
+                                                    Mild yellowish viscose liquid</p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li>Widely used for cotton knitted hosiery, wovencotton lawn, indian suiting blends
+                                                    
+                                                       
+                                                
+                                                      </li>
+                                                    <li> Super soft and smooth hand feel</li>
+                                                    <li>  Combine with Op10 give excellent hand feel and bulkiness</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Product 6 -->
+                                        <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5>TM-9860
+                                                    <!-- (Solid Content 75%) -->
+                                                </h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Hydrophilic Block Silicon Oil
+                                                    Weak cationic
+                                                    Micro emulsion
+                                                    Mild yellowish viscose liquid</p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li>Apply for cotton fabric and its blends, recom-mended for towel
+                                                        
+                                                        </li>
+                                                    <li>Super soft and fluffy hand feel enhance fabric pile hight</li>
+                                                    <li>Quick hydriphilic effec</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Product 7 -->
+                                        <div class="row custom-table-row">
+                                            <div class="col-3">
+                                                <h5> TM-OP9
+                                                    <!-- (Solid Content 60%) -->
+                                                </h5>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>Block Silicone Oil
+                                                   Weak cationic 
+                                                   Light yellow 
+                                                   SM emulsion</p>
+                                            </div>
+                                            <div class="col-5">
+                                                <ul>
+                                                    <li>Apply for cotton and its blends
+                                                        
+                                                                                                   
+                                                        </li>
+                                                    <li>Super soft and smooth hand feel</li>
+                                                    <li> Excellent in all types of fabric</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+
+                                      
+
+                                <br />
+
+
+                            </span>
+                        </div>
+                        <!-- HS series========  -->
+
+                        <div class="tab-pane" id="HS-Series-info">
+                            <!-- <span>HS-Series</span> -->
+
+
+
+                            <br />
+                            <img src="./assets/img/Auxiliary/fatty1.jpg"
+                            style="height: auto; width: 100%; border-radius: 20px; " 
+                            alt="Dyes product image"
+                            class="img-responsive" />
+
+                            <h1></h1>
+                        </div>
+                        <br />
+
+                        <!-- medium series========  -->
+                        <div class="tab-pane" id="series-v-info">
+
+                            <img src="./assets/img/Auxiliary/specialty1.jpg"
+                            style="height: auto; width: 100%; border-radius: 20px; " 
+                            alt="Dyes product image"
+                            class="img-responsive" />
+                            <h1></h1>
+                            <img src="./assets/img/Auxiliary img/99.jpg"
+                            style="height: 400px; width: 100%; border-radius: 20px; " 
+                            alt="Dyes product image"
+                            class="img-responsive" />
+
+
+                        </div>
+
+                        <!-- BI series== D======  -->
+                        <div class="tab-pane" id="BI-D-info">
+                            <!-- <span>BI-D.</span> -->
+                            <h4 style="
+      background: var(--bs-border-color-translucent);
+      border-radius: -47px;
+    ">
+                                BI-D Reactive Dyes
+                            </h4>
+
+                            <br>
+                            <img src="./assets/img/reactiv imges/b-d series.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <!-- <h1></h1> -->
+                            <img src="./assets/img/reactiv imges/d4.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <!-- <h1></h1> -->
+                            <!-- <img src="./assets/img/reactiv imges/d5.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" /> -->
+                        </div>
+
+                        <!-- B-1 HE series=  BI-D =======  -->
+                        <div class="tab-pane" id="BI-HE-info">
+                            <!-- <span>BI-HE.</span> -->
+                            <h4 style="
+      background: var(--bs-border-color-translucent);
+      border-radius: -47px;
+    ">
+                                BI-HE Reactive Dyes
+                            </h4>
+                            <br />
+
+                            <ul class="arrow-list" style="text-align: justify">
+                                <li>
+                                    Excellent of the high-temperature (80 C) dyes, process stability
+                                </li>
+
+                                <li>
+                                    Dyeing with good reproducibility
+
+
+                                </li>
+                                <li> Excellent leveling</li>
+                                <li>
+                                    Good permeability and diffuse, shade buildup
+                                </li>
+
+                                <li> Excellent alkali stability, dye selection for post-mercerization</li>
+                                <!-- <hr style="color: #111648" />
+                                <li>
+                                    Recommended Trichromatic combination
+                                </li>
+                                <li>Recommended very deep Trichromatic combinatior</li> -->
+
+
+                            </ul>
+
+                            <h1></h1>
+                            <img src="./assets/img/reactiv imges/HE.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- continous dying -----------------------= start  -->
+                        <!-- EDP group series========  -->
+                        <div class="tab-pane" id="BI-EDP-info">
+                            <!-- <span>BI-EDP group.</span> -->
+                            <h4 style="
+      background: var(--bs-border-color-translucent);
+      border-radius: -47px;
+    ">
+                                BI-EDP Reactive Dyes
+                            </h4>
+                            <br>
+                            <img src="./assets/img/reactiv imges/EDP 1.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <!-- <img src="./assets/img/reactiv imges/d6.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" /> -->
+                            <br>
+
+                        </div>
+
+
+                        <!-- EGP================================  -->
+
+                        <div class="tab-pane" id="series-EGB-info">
+                            <h1></h1>
+
+                            <h4 style="background: var(--bs-border-color-translucent);   border-radius: -47px;  ">
+                                BI-EGB Reactive Dyes
+                            </h4>
+                            <br>
+                            <img src="./assets/img/reactiv imges/EGP.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+
+
+                        </div>
+                        <!-- TRICHROMATIC COMBINATION================================  -->
+                        <div class="tab-pane" id="series-TC-info">
+
+                            <h4 style="
+background: var(--bs-border-color-translucent);
+border-radius: -47px;
+">
+                                TRICHROMATIC COMBINATION
+                            </h4>
+                            <br>
+                            <img src="./assets/img/reactiv imges/TC2.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+
+                            <br>
+
+                        </div>
+
+
+                        <div class="tab-pane" id="series-con-info">
+                            <h4 style="
+        color: rgb(246, 246, 247);
+        font-size: larger;
+        font-weight: bold;
+        border-radius: -47px;
+        width: 80%;
+        background-color: #446085;
+      ">
+                                Exhaustion Dyeing Process Recommendation
+                            </h4>
+                            <img src="./assets/img/reactiv imges/EXHUSTING RECOMMEND.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+                var target = $(e.target).attr("href"); // activated tab
+                var targetInfo = target + "-info";
+                $(".tab-pane").removeClass("active");
+                $(target).addClass("active");
+                $(targetInfo).addClass("active");
+            });
+        });
+    </script>
+
+    <!-- end tabs =================================  -->
+    <br />
+    <section style="padding-top: 100px">
+        <div class="col-12"><br /></div>
+    </section>
+
+
+    <div class="container-fluid p-0 m-0">
+    </div>
+    <br><br>
+        <!-- Bootstrap Footer -->
+        <footer class="text-white pt-5 pb-4" style="background-color: rgb(33, 30, 59);">
+            <div class="container-fluid pt-3">
+                <div class="row text-md-left text-center m-0">
+        
+                    <!-- Logo and Social Media Section -->
+                    <div class="col-md-4 d-flex flex-column align-items-center" style="background-color: rgb(33, 30, 59);">
+                        <a href="../index.html">
+                            <img src="../logo bg.png" width="138px" height="auto" alt="Texman Logo" class="img-fluid mb-3">
+                        </a>
+                        <p style="font-size: 14px; text-align: center;">
+                            The initial development of Dongguan Texman Textile Technology Co., Ltd. products was focused on knitted fabric dyeing.
+                        </p>
+                        <h5 class="text-light mb-4" style="font-size: 2.25rem; font-weight: bold;">Find us on social media</h5>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Quick Links Section -->
+                    <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                        <h5 class="mb-4 text-light" style="font-size: 2.25rem; font-weight: bold;">Quick Links</h5>
+                        <p><a href="../index.html" class="text-white">Home</a></p>
+                        <p><a href="../certificated/certificate.html" class="text-white">Certifications</a></p>
+                        <p><a href="../index.html#about" class="text-white">Our Company</a></p>
+                        <p><a href="#" class="text-white">Contact Us</a></p>
+                    </div>
+        
+                    <!-- Business Area Section -->
+                    <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                        <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Business Area</h5>
+                        <p><a href="../Dispers dyes/dispers.html" class="text-white">Disperse Dyes</a></p>
+                        <p><a href="../Reactive.html" class="text-white">Reactive Dyes</a></p>
+                        <p><a href="./Auxiliary/Auxiliary.html" class="text-white">Pretreatment Series</a></p>
+                    </div>
+        
+                    <!-- Sustainability Section -->
+                    <div class="col-md-2" style="background-color: rgb(33, 30, 59);">
+                        <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Sustainability</h5>
+                        <p><a href="../certificated/certificate.html#Quality" class="text-white">Quality Management</a></p>
+                        <p><a href="../certificated/certificate.html#Sustainability" class="text-white">Sustainability and Safety</a></p>
+                    </div>
+                </div>
+        
+                <hr class="mb-4">
+        
+                <!-- Copyright Section -->
+                <div class="row align-items-center" style="background-color: rgb(33, 30, 59);">
+                    <div class="col-md-12 col-lg-12 text-center">
+                        <p style="font-size: 1.1rem;">Copyright © 2024 
+                            <a href="https://texman.net/" class="text-white font-weight-bold">TEXMAN</a> All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+
+
+
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- <style>
+            h5 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+            }
+            a {
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+            }
+        </style> -->
+
+
+<!-- social icon -------------------------------  -->
+<div class="social-icons">
+
+    <a href="https://texman.net/#" target="_blank" title="Chat with us on WeChat" class="social-icon wechat-icon">
+
+        <img src="../wecht.png" alt="WeChat Icon" class="social-img">
+        <img src="../barcode texman.png" alt="WeChat Barcode" class="tooltip-img">
+    </a>
+
+    <a href="https://api.whatsapp.com/send?phone=++8615362800214&text=Well+come+to+my+inbox" target="_blank"
+        title="Chat with us on WhatsApp" class="social-icon">
+        <img src="../watsup.png" style="border-radius: 10px;" alt="WhatsApp Icon" class="social-img">
+    </a>
+</div>
+
+<style>
+    .social-icons {
+        position: fixed;
+        right: 0;
+        top: 70%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        /* Space between icons */
+        z-index: 1000;
+        /* Ensure icons are above other content */
+    }
+
+    .social-icon {
+        position: relative;
+        display: block;
+        text-decoration: none;
+    }
+
+    .social-icon .social-img {
+        width: 56px;
+        /* Adjust to match your icon size */
+        height: 56px;
+        /* Adjust to match your icon size */
+        display: block;
+        z-index: 10;
+        /* Ensure the icon is above other elements */
+    }
+
+    .social-icon .tooltip-img {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        /* Adjust this value to position the image */
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, right 0.3s ease;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        max-width: 150px;
+        /* Adjust size as needed */
+        height: auto;
+        z-index: 20;
+        /* Ensure the tooltip is above the icon */
+    }
+
+    .social-icon.wechat-icon:hover .tooltip-img {
+        opacity: 1;
+        visibility: visible;
+        right: 20px;
+        /* Shifts image left by 20px on hover */
+    }
+</style>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.min.js?h=ee49e4b421a33c2774a60d2276cb9bf9"></script>
+</body>
+
+</html>

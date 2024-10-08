@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Reactive Dyes</title>
+     <!-- Favicon -->
+ <link rel="icon" type="image/png" href="./logo bg.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+</head>
+
+<style>
+    .tab-pane img {
+        height: 150px;
+        width: 80%;
+        border-radius: 60px;
+    }
+</style>
+
+<body style="overflow-x: hidden">
+
+
+    
+    <style>
+        /* OC top header bar styling */
+        .oc-top-bar {
+            background-color: #2C318F; /* Dark blue background */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between; /* Align elements at both ends */
+            align-items: center;
+            z-index: 9999; /* Ensure top bar is always visible */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+        }
+    
+        .oc-social-icons {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .oc-social-icons a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .oc-social-icons a:hover {
+            color: #eeeeee; /* Gold color on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+    
+        .oc-contact-info {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info span {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info i {
+            margin-right: 8px;
+            color: #fffffc; /* Gold color for icons */
+        }
+    
+        /* Responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            .oc-top-bar {
+                flex-direction: column; /* Stack items vertically */
+                text-align: center; /* Center align text and icons */
+                padding: 10px 0;
+            }
+    
+            .oc-social-icons {
+                justify-content: center; /* Center the social icons */
+                margin-bottom: 10px;
+            }
+    
+            .oc-contact-info {
+                justify-content: center; /* Center the contact info */
+                gap: 15px; /* Reduce gap on mobile */
+                font-size: 14px; /* Slightly smaller font size for mobile */
+            }
+        }
+    </style>
+    
+    <!-- OC Top header bar -->
+    <div class="oc-top-bar">
+        <div class="oc-social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    
+        <div class="oc-contact-info">
+            <span><i class="fa fa-phone"></i> +86 153 6280 0214</span>
+            <span><i class="fa fa-envelope"></i> sales@texman.net</span>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Main Header -->
+    <br> <br> <br> 
+    <header class="header" id="header">
+        <nav class="navbar container-fluid" style="height: auto">
+            <section class="navbar__left position-relative top-50">
+                <a class="navbar-brand" href="../index.html" style="height: auto">
+                    <img src="./logo.png" width="136" alt="Logo" height="auto"
+                        style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px" /></a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span><span
+                            class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item">
+                            <a href="./index.html" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Business Area <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__text">
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile  Dyes</h4>
+
+                                    <ul class="submenu__list">
+                                        <li><a href="#">Reactive Dyes</a></li>
+                                        <li><a href="./Dispers dyes/dispers.html">Disperse Dyes</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile  Auxiliary</h4>
+                                    <ul class="submenu__list">
+                                        <!-- <li><a href="./Auxiliary/Auxiliary.html">Pretreatment Series</a></li>
+                                        <li><a href="./Auxiliary/Auxiliary.html">Dyeing Series</a></li> -->
+                                        <li><a href="./Auxiliary/Auxiliary.html">Finishing Series</a></li>
+                                    </ul>
+                                </div>
+                             
+                                <!-- <div class="submenu__inner">
+                                    <h4 class="submenu__title">Organic Matrials</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">Displays</a></li>
+                                        <li><a href="#">Functional Matrials</a></li>
+                                        <li><a href="#">Custom Synthesis</a></li>
+                                        <li><a href="#">Pigments</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./certificated/certificate.html" class="menu__link">Certifications</a>
+                        </li>
+                        <!-- <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Our Company <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__text"> -->
+                                <!-- <div class="submenu__inner">
+                                    <h4 class="submenu__title">Overview</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#"> OUR VALUES &
+                                                CERTIFICATIONS</a></li>
+                                        <li><a href="#"> Our MISSION
+                                            </a></li>
+                                        <li><a href="#">Productoin</a></li>
+                                        <li><a href="#">R&amp;D</a></li>
+
+                                    </ul>
+                                </div> -->
+                                <!-- <div class="submenu__inner">
+                                    <h4 class="submenu__title">News</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#"> Publiation</a></li>
+                                        <li><a href="#"> FAQ</a></li>
+
+                                    </ul>
+                                </div> -->
+                                <!-- <div class="submenu__inner">
+                                    <h4 class="submenu__title">Research</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">Displays</a></li>
+                                        <li><a href="#">Functional Matrials</a></li>
+                                        <li><a href="#">Custom Synthesis</a></li>
+                                    </ul>
+                                </div> -->
+                            <!-- </div>
+                        </li> -->
+                        <li class="menu__item">
+                            <a href="#" class="menu__link"> Our Company</a>
+                        </li>
+                        
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Sustainability <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="./certificated/certificate.html#Quality" >Quality Management</a></li>
+                                    <li><a href="./certificated/certificate.html#Sustainability" >Sustainability and Safety</a></li>
+
+                                  
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- <li class="menu__item">
+                            <a href="#" class="menu__link">Contact Us</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <!-- Start: NMDIGbanner -->
+    <div style="height: auto; padding-top: 100px">
+        <!-- Start: Header -->
+        <div class="header-blue"style="
+        background-image: url('./assets/img/reactiv imges/d14.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+        >
+            <div class="row">
+                <!-- Start: Text -->
+                <div class="col-md-6 col-lg-5 col-xl-5 offset-lg-1" style="
+              background-color: rgba(78, 70, 70, 0.87);
+              margin-top: 80px;
+              margin-left: 25px;
+              margin-right: auto;
+              padding-right: 0px;
+            ">
+                    <h1 style="
+                margin-top: 25px;
+                margin-bottom: 25px;
+                color: rgb(252, 252, 252);
+                font-size: 52px;
+              ">
+                        REACTIVE DYES
+                    </h1>
+                    <p style="
+                color: rgb(255, 253, 253);
+                margin-bottom: 25px;
+                height: 77px;
+              ">
+                        This specification is compiled based on the current experience and knowledge of our company. It
+                        is provided for reference purposes only. Given the many factors that can affect product use, the
+                        actualperfor­ mance may differ from the data provided and cannot be guaranteed. Customers are
+                        advised to test the products according to their own actual situation to ensure that the product
+                        meets their requirements.
+
+                    </p>
+                    <br>
+                </div>
+                <!-- End: Text -->
+            </div>
+        </div>
+        <!-- End: Header -->
+    </div>
+    <!-- End: NMDIGbanner -->
+
+
+    <div class="col-md-12" style="padding-top: 10px">
+        <!-- Start: PS Cinel cursos heading -->
+        <h1 class="section-heading bg-light" style="color: #111648">
+            Textile Dyes
+
+        </h1>
+        <h4 style="width: 100%; color: aliceblue">
+            <!-- TRICHROMATIC COMBINATION PROPERTIES -->
+        </h4>
+        <!-- <h1 class="display-3 text-uppercase" style="padding-right: 10px;padding-bottom: 10px;">CINEL cursos</h1> -->
+        <hr />
+        <!-- End: PS Cinel cursos heading -->
+        <!-- <hr > -->
+
+        <div class="container-md">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <ul class="nav nav-tabs tabs-left sideways">
+
+                        <li class="active">
+                            <a href="#home-v" style="border-radius: 8px" data-toggle="tab">Amazole Reactive KHL Series</a>
+                        </li>
+                        <li>
+                            <a href="#profile-v" style="border-radius: 8px" data-toggle="tab">Amazole Reactive 2R Series</a>
+                        </li>
+
+                        <li>
+                            <a href="#reactiv-v" style="border-radius: 8px" data-toggle="tab">Amazole Reactive K Series</a>
+                        </li>
+                        <li>
+                            <a href="#disperse-v" style="border-radius: 8px" data-toggle="tab">
+                                Deep Shades ED Series</a>
+                        </li>
+                        <li>
+                            <a href="#HS-Series" style="border-radius: 8px" data-toggle="tab">
+                                Deep Shades HS Series</a>
+                        </li>
+                        <li>
+                            <a href="#series-v" style="border-radius: 8px" data-toggle="tab">Medium Temperature Reactive
+                                Dyes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#BI-D" style="border-radius: 8px" data-toggle="tab">Bi-Functional Group D
+                                Series</a>
+                        </li>
+                        <li>
+                            <a href="#BI-HE" style="border-radius: 8px" data-toggle="tab">Bi-Functional Group HE
+                                Series</a>
+                        </li>
+                        <li>
+                            <a href="#BI-EDP" style="border-radius: 8px" data-toggle="tab">Deep Shades ED-P Series</a>
+                        </li>
+                        <li>
+                            <a href="#series-EGB" style="border-radius: 8px" data-toggle="tab">Deep Shades EGB
+
+                                Series</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#series-EGB " style="border-radius: 8px" data-toggle="tab">Deep Shades EGB
+
+                                Series</a>
+                        </li> -->
+
+                        <!-- <li>
+                            <a href="#series-TC" style="border-radius: 8px" data-toggle="tab">Trichromatic Combination
+                            </a>
+                        </li> -->
+                        <!-- <li>
+                            <a href="#series-con" style="border-radius: 8px" data-toggle="tab">
+                                Continuous Dyeing Process Recommendation
+                            </a>
+                        </li> -->
+                        <!-- <li><a href="#series-v" style="border-radius:8px;" data-toggle="tab">100</a></li> -->
+                        <br><br><br><br> <br><br><br><br>
+                    </ul>
+                </div>
+                <!-- second column ------------------------======  -->
+                <div class="col-sm-4 col-lg-4 col-xs-12">
+                    <div class="tab-content" style="padding-top: 10px">
+                        <div class="tab-pane active" id="home-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Amazole Reactive KHL
+                            </h4>
+
+                            <img src="./assets/img/reactiv imges/KHL all.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+                                <br>
+                                <img src="./assets/img/reactiv imges/TC2.png" style="height: auto; width: 100%; border-radius: 20px" alt="Series image" class="img-responsive" />
+
+                        </div>
+
+                        <!-- second 2 img============  -->
+                        <div class="tab-pane" id="profile-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Amazole Reactive 2R
+                            </h4>
+
+                            <img src="./assets/img/reactiv imges/2R.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+
+                        </div>
+                        <!-- 3rd ================  -->
+                        <div class="tab-pane" id="reactiv-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Amazole Reactive K Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/K3RS.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Reactiv Dyes image"
+                                class="img-responsive" />
+                        </div>
+
+
+                        <!-- 4th ==============================  -->
+                        <div class="tab-pane" id="disperse-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Deep Shades ED Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/ED SerIES.png "
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Disperse Dyes image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 5th ========   =================  -->
+                        <div class="tab-pane" id="HS-Series">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Deep Shades HS Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/HS Series.png "
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Dyes image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 6yh medium ==================  -->
+                        <div class="tab-pane" id="series-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Medium Temperature Reactive Dyes
+                            </h4>
+
+                            <img src="./assets/img/reactiv imges/medium.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <img src="./assets/img/reactiv imges/medium2.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+
+
+                        </div>
+
+                        <!-- 7yh BI-D ==================  -->
+                        <div class="tab-pane" id="BI-D">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Bi-Functional Group D Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/b-f d series 2.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 8yh ==================  -->
+                        <div class="tab-pane" id="BI-HE">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Bi-Functional Group HE Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/HE1.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 9yh ================== Deep Shades ED-p Series -->
+                        <div class="tab-pane" id="BI-EDP">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Deep Shades ED-P Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/EDP series.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 10yh ==================EGB  -->
+                        <div class="tab-pane" id="series-EGB">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: rgb(42, 47, 120);
+                  ">
+                                Deep Shades EGB Series
+                            </h4>
+                            <img src="./assets/img/reactiv imges/EGP1.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 10yh ================== Trichromatic Combination  -->
+                        <!-- <div class="tab-pane" id="series-TC">
+                            <h4 style="
+        color: rgb(246, 246, 247);
+        font-size: larger;
+        font-weight: bold;
+        border-radius: -47px;
+        width: 80%;
+        background-color: rgb(42, 47, 120);
+      ">
+                                Trichromatic Combination
+                            </h4>
+                            <img src="./assets/img/reactiv imges/TC.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <h1 style="width: 80%;"></h1>
+                            <img src="./assets/img/reactiv imges/TC1.png"
+                                style="height: auto; width:80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div> -->
+
+                        <!-- 10yh ==================EGB  -->
+                        <!-- <div class="tab-pane" id="series-con">
+                            <h4 style="
+        color: rgb(246, 246, 247);
+        font-size: larger;
+        font-weight: bold;
+        border-radius: -47px;
+        width: 80%;
+        background-color: rgb(42, 47, 120);
+      ">
+                                Continuous Dyeing Process Recommendation
+                            </h4>
+                            <img src="./assets/img/reactiv imges/cd process recommendation.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <!-- second div collumn -->
+                <div class="col-sm-5 col-xs-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home-v-info">
+
+<!-- --------------------------  -->
+
+<style>
+   
+    .card {
+   /* max-width: 300px; */
+   border-left: 3px solid #261c63;
+   padding: 10px;
+   margin-top: 100px;
+   /* font-family: Arial, sans-serif; */
+ }
+ 
+ .section {
+   margin-bottom: 20px;
+ }
+ 
+ .title {
+   font-size: 18px;
+   font-weight: bold;
+   color: #261c63;
+ }
+ 
+ .subtitle {
+   font-size: 16px;
+   font-weight: bold;
+   color: #261c63;
+   border-bottom: 1px solid #261c63;
+   padding-bottom: 3px;
+   margin-bottom: 5px;
+ }
+ 
+ .content {
+   font-size: 14px;
+   color: #666;
+ }
+ 
+ .section:last-child {
+   margin-bottom: 0;
+ }
+ 
+   </style>
+
+ <div class="card">
+   <div class="icon"></div>
+   <div class="">
+    <div class="title"> Trichromatic Combination for light Shades with High Fastnesses
+        Properties</div>
+  </div>
+  <h1 style="padding: 1px;"></h1>
+   <div class="">
+    <ul class="arrow-list">
+        <li>Particularly for medium and light shades</li>
+        <li>
+            Compared with ordinary dyes, and their light fastness to be
+            clearly higher
+        </li>
+        <li>Get good compatibility and leveling property</li>
+        <br />
+    </ul>
+   
+    <img src="./Auxiliary\assets\img\Auxiliary img\d7.jpg"
+    style="height: 260px; width: 100%; border-radius: 20px" alt="Series image"
+    class="img-responsive" />
+    
+   </div>
+ 
+ </div>
+<!-- -------------------------------- -->
+
+                        </div>
+                        <!-- 2=========================  -->
+                        <div class="tab-pane" id="profile-v-info">
+
+
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                 <div class="title"> Trichromatic Combination with Excellent Compatibility</div>
+                               </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+
+                                    <ul class="arrow-list">
+                                        <li>Excellent compatibility</li>
+                                        <li>Excellent washing and rubbing fastnesses</li>
+                                        <li>Trichromatic have Excellent reproducibility</li>
+                                    </ul>
+                                 
+                                </div>
+                              
+                              </div>
+                             <!-- -------------------------------- -->
+                        </div>
+                        <!-- 3========  -->
+                        <div class="tab-pane" id="reactiv-v-info">
+
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                 <div class="title">Trichromatic Combination with Excellent Compatibility</div>
+                               </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+
+                                    <ul class="arrow-list">
+                                        <li>
+                                            Very good compatibility, medium and low substantivity, Low
+                                            Sensitivity forExhaustion Dyeing
+                                        </li>
+                                        <li>Excellent washing and rubbing fastnesses</li>
+                                        <li>
+                                            Especially in the light colour Trichromatic have Excellent
+                                            reproducibility thancommodities
+                                        </li>
+                                        <li>Controlled Reaction hence excellent Levelling</li>
+                                    </ul>
+                                 
+                                </div>
+                              
+                              </div>
+                        </div>
+                        <!-- ED series========  -->
+                        <div class="tab-pane arrow-list" id="disperse-v-info">
+
+
+
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                 <div class="title"> Ultra-high strength dyes dyed deep with good,<br />
+                                    especially suitable for dyeing dark and special dark.</div>
+                               </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+
+                                    <span>
+                                       
+        
+                                      
+                                            <li>Good compatibility, good stability process.</li>
+                                                                                <li>
+                                                Will still have a good dyeing dark wash and rubbing
+                                                fastness.
+                                            </li>
+                                       
+                                            <li>Comprehensive low cost, good economic.</li>
+                                            <h1 style="padding: 1px;"></h1>                           
+        
+                                        <ul class="arrow-list" style="text-align: justify">
+                                            <li>
+                                                <strong>Amazole Reactive Scarlet ED-G</strong> <br />
+                                                has solved the dyeing dark red, the shade of the
+                                                brightness, as well as ironing, washing, and rubbing
+                                                fastness problems.
+                                            </li>
+                                            <li>
+                                                <strong>Amazole Reactive Dark Red ED-4B</strong><br />
+                                                in the dark series shows the best washing and rubbing
+                                                fastness.
+                                            </li>
+        
+                                            <li>
+                                                <strong>Amazole Reactive Orange ED-3R</strong><br />
+                                                has good dyeing depth, and excellent washing and rubbing
+                                                fastness.
+                                            </li>
+        
+                            
+                                            <li>
+                                                Recommended medium and deep Trichromatic combination
+                                            </li>
+                                            <li>Recommended very deep Trichromatic combinatior</li>
+        
+                                            <br />
+                                            <img src="./assets/img/reactiv imges/D3.jpg"
+                                                style="height: 260px; width: 100%; border-radius: 20px" alt="Series image"
+                                                class="img-responsive" />
+                                            <!-- ===================== block 4 -->
+        
+                                            <!-- <h4 style="background: darkgray;border-radius: -47px;">
+                                
+                                            <li>
+                                             Recommended very deep Trichromatic combinatior
+                                            </li>
+                                        </h4>   -->
+                                        </ul>
+                                    </span>
+                                </div>
+                              
+                              </div>
+
+
+                          
+                        </div>
+                        <!-- HS series========  -->
+
+                        <div class="tab-pane" id="HS-Series-info">
+                            <!-- <span>HS-Series</span> -->
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                 <div class="title"> Exhaustion Dyeing Hs Series</div>
+                               </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+
+                                    
+                        <ul class="arrow-list">
+                            <li>Economic dyes with excellent build up in, especially suitabl
+                                for dyeing in the dark and special dark
+                            </li>
+                            <li> Excellent compatibility and leveling, which is suitable for
+                                Exhaust Dveina, hank, bobbin varn dip dveino clearly higher
+                                Better reproducibility than ordinary dyes</li>
+                            <li> Excellent color buildup, deep shades with wash and rubbing
+                                fastness</li>
+
+
+
+                        </ul>
+                        <h1 style="padding: 1px;"></h1>
+
+                        <ul>
+                            <li>Recommended medium and dark Shades Trichromatic
+                                combination</li>
+                            <li> Recommended very deep Trichromatic combination</li>
+                        </ul>
+                                </div>
+
+                              
+                              </div>
+
+                            <img src="./assets/img/reactiv imges/HS1.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                                
+
+                        </div>
+                    
+
+                        <!-- medium series========  -->
+                        <div class="tab-pane" id="series-v-info">
+
+                            <img src="./assets/img/reactiv imges/medium4.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+
+                                <div class="card">
+                                    <div class="icon"></div>
+                                    <div class="">
+                                     <div class="title"> Medium Temperature Reactive Dyes</div>
+                                   </div>
+                                   <h1 style="padding: 1px;"></h1>
+                                    <div class="">
+    
+                                        
+                                        <ul class="arrow-list">
+
+                                            <li> Wide range of color, good substantivity</li>
+                                            <li> High performance, economical and controlled reaction</li>
+                                            <li> Variety of dyes with special functions, for dyeing and printing industry
+                                                to deal with common complex troubles to provide effective solutions</li>
+                                            <li>Amazole Reactive Yellow M-5R relatively bright vellow</li>
+                                            <li>Amazole Reactive Red GD, Amazole Reactive Red 2GF special bright
+                                                red, irparticular suitable for dyeing bright light red with good
+                                                perspiration and lightfastness</li>
+                                            <li>Amazole Reactive Blue RSP excellent stability of the salinity and alkali.
+                                                ablto effectively prevent precipitation caused by dye color points and
+                                                color bar</li>
+                                                <h1 style="padding: 1px;"></h1>
+                                            <img src="./assets/img/reactiv imges/medium1.png"
+                                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                                class="img-responsive" />
+                                                <h1 style="padding: 1px;"></h1>
+                                            <img src="./assets/img/reactiv imges/medium3.png"
+                                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                                class="img-responsive" />
+                                                  
+                                                <h1 style="padding: 1px;"></h1>
+                                            <img src="./assets/img/reactiv imges/D1.jpg"
+                                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                                class="img-responsive" />
+                                                <h1 style="padding: 1px;"></h1>
+                                            <img src="./assets/img/reactiv imges/D2.jpg"
+                                                style="height: 300px; width: 100%; border-radius: 20px" alt="Series image"
+                                                class="img-responsive" />
+                                            <!-- <br>
+                                                <img src="./assets/img/reactiv imges/D3.jpg"
+                                                style="height:300px; width: 100%; border-radius: 20px" alt="Series image"
+                                                class="img-responsive" /> -->
+            
+                                        </ul>
+                                    </div>
+    
+                                  
+                                  </div>
+
+
+                           
+                        </div>
+
+                        <!-- BI series== D======  -->
+                        <div class="tab-pane" id="BI-D-info">
+                            <!-- <span>BI-D.</span> -->
+                            <h4 style="
+      background: var(--bs-border-color-translucent);
+      border-radius: -47px;
+    ">
+                                BI-D Reactive Dyes
+                            </h4>
+
+                            <br>
+                            <img src="./assets/img/reactiv imges/b-d series.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <!-- <h1></h1> -->
+                            <img src="./assets/img/reactiv imges/d4.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <!-- <h1></h1> -->
+                            <!-- <img src="./assets/img/reactiv imges/d5.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" /> -->
+                        </div>
+
+                        <!-- B-1 HE series=  BI-D =======  -->
+                        <div class="tab-pane" id="BI-HE-info">
+                            <!-- <span>BI-HE.</span> -->
+
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                 <div class="title">                                 BI-HE Reactive Dyes
+                                </div>
+                               </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+
+                                    
+                                    <ul class="arrow-list" style="text-align: justify">
+                                        <li>
+                                            Excellent of the high-temperature (80 C) dyes, process stability
+                                        </li>
+        
+                                        <li>
+                                            Dyeing with good reproducibility
+        
+        
+                                        </li>
+                                        <li> Excellent leveling</li>
+                                        <li>
+                                            Good permeability and diffuse, shade buildup
+                                        </li>
+        
+                                        <li> Excellent alkali stability, dye selection for post-mercerization</li>
+                                           
+        
+                                    </ul>
+        
+                        <h1 style="padding: 1px;"></h1>
+
+                        <!-- <ul>
+                            <li>Recommended medium and dark Shades Trichromatic
+                                combination</li>
+                            <li> Recommended very deep Trichromatic combination</li>
+                        </ul> -->
+                                </div>
+
+                              
+                              </div>
+                                               <img src="./assets/img/reactiv imges/HE.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- continous dying -----------------------= start  -->
+                        <!-- EDP group series========  -->
+                        <div class="tab-pane" id="BI-EDP-info">
+                            <!-- <span>BI-EDP group.</span> -->
+
+
+
+                            <h4 style="
+      background: var(--bs-border-color-translucent);
+      border-radius: -47px;
+    ">
+                                BI-EDP Reactive Dyes
+                            </h4>
+                            <br>
+                            <img src="./assets/img/reactiv imges/EDP 1.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            <!-- <img src="./assets/img/reactiv imges/d6.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" /> -->
+                            <br>
+
+                        </div>
+
+
+                        <!-- EGP================================  -->
+
+                        <div class="tab-pane" id="series-EGB-info">
+                            <h1></h1>
+
+                            <h4 style="background: var(--bs-border-color-translucent);   border-radius: -47px;  ">
+                                BI-EGB Reactive Dyes
+                            </h4>
+                            <br>
+                            <img src="./assets/img/reactiv imges/EGP.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+
+
+                        </div>
+                        <!-- TRICHROMATIC COMBINATION================================  -->
+                        <!-- <div class="tab-pane" id="series-TC-info">
+
+                            <h4 style="
+background: var(--bs-border-color-translucent);
+border-radius: -47px;
+">
+                                TRICHROMATIC COMBINATION
+                            </h4>
+                            <br>
+                            <img src="./assets/img/reactiv imges/TC2.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+
+                            <br>
+
+                        </div> -->
+
+
+                        <!-- <div class="tab-pane" id="series-con-info">
+                            <h4 style="
+        color: rgb(246, 246, 247);
+        font-size: larger;
+        font-weight: bold;
+        border-radius: -47px;
+        width: 80%;
+        background-color: rgb(42, 47, 120);
+      ">
+                                Exhaustion Dyeing Process Recommendation
+                            </h4>
+                            <img src="./assets/img/reactiv imges/EXHUSTING RECOMMEND.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div> -->
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+                var target = $(e.target).attr("href"); // activated tab
+                var targetInfo = target + "-info";
+                $(".tab-pane").removeClass("active");
+                $(target).addClass("active");
+                $(targetInfo).addClass("active");
+            });
+        });
+    </script>
+
+    <!-- end tabs =================================  -->
+
+    
+<!-- Footer with Unique ID -->
+<!-- <div class="container-fluid"></div>  -->
+<!-- <div class="container-fluid"></div> -->
+<div class="container-fluid p-0 m-0">
+</div>
+
+<footer class="text-white pt-5 pb-4" style="background-color: rgb(33, 30, 59);">
+    <div class="container-fluid pt-3">
+        <div class="row text-md-left text-center m-0">
+
+            <!-- Logo and Social Media Section -->
+            <div class="col-md-4 d-flex flex-column align-items-center" style="background-color: rgb(33, 30, 59);">
+                <a href="./index.html">
+                    <img src="./logo bg.png" width="138px" height="auto" alt="Texman Logo" class="img-fluid mb-3 mx-auto">
+                </a>
+                <p style="font-size: 14px; text-align: center;">
+                    The initial development of Dongguan Texman Textile Technology Co., Ltd. products was focused on knitted fabric dyeing.
+                </p>
+                <h5 class="text-light text-center" style="font-size: 2.25rem; font-weight: bold;">Find us on social media</h5>
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                <h5 class="mb-4 text-light" style="font-size: 2.25rem; font-weight: bold;">Quick Links</h5>
+                <p><a href="./index.html" class="text-white">Home</a></p>
+                <p><a href="./certificated/certificate.html" class="text-white">Certifications</a></p>
+                <p><a href="./index.html#about" class="text-white">Our Company</a></p>
+                <p><a href="./index.html#contacts" class="text-white">Contact Us</a></p>
+            </div>
+
+            <!-- Business Area Section -->
+            <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                <h5 class="mb-4 text-light" style="font-size: 2.25rem; font-weight: bold;">Business Area</h5>
+                <p><a href="./Dispers dyes/dispers.html" class="text-white">Disperse Dyes</a></p>
+                <p><a href="#" class="text-white">Reactive Dyes</a></p>
+                <p><a href="./Auxiliary/Auxiliary.html" class="text-white">Textile Auxiliary</a></p>
+            </div>
+
+            <!-- Sustainability Section -->
+            <div class="col-md-2" style="background-color: rgb(33, 30, 59);">
+                <h5 class="mb-4 text-light" style="font-size: 2.25rem; font-weight: bold;">Sustainability</h5>
+                <p><a href="./certificated/certificate.html#Quality" class="text-white">Quality Management</a></p>
+                <p><a href="./certificated/certificate.html#Sustainability" class="text-white">Sustainability and Safety</a></p>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <!-- Copyright Section -->
+        <div class="row align-items-center text-center" style="background-color: rgb(33, 30, 59);">
+            <div class="col-md-12 col-lg-12">
+                <p style="font-size: 3.1rem;">Copyright © 2024 
+                    <a href="https://texman.net/" class="text-white font-weight-bold">TEXMAN</a> All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<style>
+    @media (max-width: 768px) {
+        .row.text-md-left {
+            text-align: center;
+        }
+    }
+</style>
+
+
+    
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+ 
+
+    <!-- <style>
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+        }
+        a {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+    </style> -->
+
+
+<!-- social icon -------------------------------  -->
+<div class="social-icons">
+
+    <a href="https://texman.net/#" target="_blank" title="Chat with us on WeChat" class="social-icon wechat-icon">
+
+        <img src="./wecht.png" alt="WeChat Icon" class="social-img">
+        <img src="./barcode texman.png" alt="WeChat Barcode" class="tooltip-img">
+    </a>
+
+    <a href="https://api.whatsapp.com/send?phone=++8615362800214&text=Well+come+to+my+inbox" target="_blank"
+        title="Chat with us on WhatsApp" class="social-icon">
+        <img src="./watsup.png" style="border-radius: 10px;" alt="WhatsApp Icon" class="social-img">
+    </a>
+</div>
+
+<style>
+    .social-icons {
+        position: fixed;
+        right: 0;
+        top: 70%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        /* Space between icons */
+        z-index: 1000;
+        /* Ensure icons are above other content */
+    }
+
+    .social-icon {
+        position: relative;
+        display: block;
+        text-decoration: none;
+    }
+
+    .social-icon .social-img {
+        width: 56px;
+        /* Adjust to match your icon size */
+        height: 56px;
+        /* Adjust to match your icon size */
+        display: block;
+        z-index: 10;
+        /* Ensure the icon is above other elements */
+    }
+
+    .social-icon .tooltip-img {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        /* Adjust this value to position the image */
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, right 0.3s ease;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        max-width: 150px;
+        /* Adjust size as needed */
+        height: auto;
+        z-index: 20;
+        /* Ensure the tooltip is above the icon */
+    }
+
+    .social-icon.wechat-icon:hover .tooltip-img {
+        opacity: 1;
+        visibility: visible;
+        right: 20px;
+        /* Shifts image left by 20px on hover */
+    }
+</style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.min.js?h=ee49e4b421a33c2774a60d2276cb9bf9"></script>
+</body>
+
+</html>

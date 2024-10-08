@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="../logo bg.png">
+    <title>Dispers Dyes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<style>
+    .tab-pane img {
+        height: 150px;
+        width: 100%;
+        border-radius: 60px;
+    }
+
+    .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+          
+</style>
+
+<body style="overflow-x: hidden">
+
+    <style>
+        /* OC top header bar styling */
+        .oc-top-bar {
+            background-color: #2C318F; /* Dark blue background */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between; /* Align elements at both ends */
+            align-items: center;
+            z-index: 9999; /* Ensure top bar is always visible */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+        }
+    
+        .oc-social-icons {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .oc-social-icons a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .oc-social-icons a:hover {
+            color: #eeeeee; /* Gold color on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+    
+        .oc-contact-info {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info span {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+    
+        .oc-contact-info i {
+            margin-right: 8px;
+            color: #fffffc; /* Gold color for icons */
+        }
+    
+        /* Responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            .oc-top-bar {
+                flex-direction: column; /* Stack items vertically */
+                text-align: center; /* Center align text and icons */
+                padding: 10px 0;
+            }
+    
+            .oc-social-icons {
+                justify-content: center; /* Center the social icons */
+                margin-bottom: 10px;
+            }
+    
+            .oc-contact-info {
+                justify-content: center; /* Center the contact info */
+                gap: 15px; /* Reduce gap on mobile */
+                font-size: 14px; /* Slightly smaller font size for mobile */
+            }
+        }
+    </style>
+    
+    <!-- OC Top header bar -->
+    <div class="oc-top-bar">
+        <div class="oc-social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    
+        <div class="oc-contact-info">
+            <span><i class="fa fa-phone"></i> +86 153 6280 0214</span>
+            <span><i class="fa fa-envelope"></i> sales@texman.net</span>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Main Header -->
+    <br> <br> <br> 
+
+    <header class="header" id="header">
+        <nav class="navbar container-fluid" style="height: auto">
+            <section class="navbar__left position-relative top-50">
+                <a class="navbar-brand" href="../index.html" style="height: auto">
+                    <img src="../logo.png" width="136" alt="Logo" height="auto"
+                        style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px" /></a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span><span
+                            class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item">
+                            <a href="../index.html" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Business Area <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__text">
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile Dyes</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="../Reactive.html">Reactive Dyes</a></li>
+                                        <li><a href="#">Disperse Dyes</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Textile Auxiliary</h4>
+                                    <ul class="submenu__list">
+                                        <!-- <li><a href="../Auxiliary/Auxiliary.html#home-v">Pretreatment Series</a></li>
+                                        <li><a href="../Auxiliary/Auxiliary.html#profile-v">Dyeing Series</a></li> -->
+                                        <li><a href="../Auxiliary/Auxiliary.html#">Finishing Series</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- <div class="submenu__inner">
+                                    <h4 class="submenu__title">Organic Matrials</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#">Displays</a></li>
+                                        <li><a href="#">Functional Matrials</a></li>
+                                        <li><a href="#">Custom Synthesis</a></li>
+                                        <li><a href="#">Pigments</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../certificated/certificate.html" class="menu__link">Certifications</a>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="../index.html#about" class="menu__link">
+                                Our Company <i class="bx bx-chevron-right"></i></a>
+                            <!-- <div class="submenu megamenu__text">
+                                <div class="submenu__inner">
+                                    <h4 class="submenu__title">Overview</h4>
+                                    <ul class="submenu__list">
+                                        <li><a href="#"> OUR VALUES &
+                                                CERTIFICATIONS</a></li>
+                                        <li><a href="#"> Our MISSION
+                                            </a></li>
+                                      
+
+                                    </ul>
+                                </div>
+                               
+                            </div> -->
+                        </li>
+                       
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Sustainability <i class="bx bx-chevron-right"></i></a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="../certificated/certificate.html#Quality" >Quality Management</a></li>
+                                    <li><a href="../certificated/certificate.html#Sustainability" >Sustainability and Safety</a></li>
+
+                                  
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- <li class="menu__item">
+                            <a href="#" class="menu__link">Support</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <!-- Start: NMDIGbanner -->
+    <div style=" padding-top: 100px">
+        <!-- Start: Header -->
+        <div class="header-blue" style="
+        background-image: url('./assets/img/Dispers img/d6.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      ">
+            <div class="row">
+                <!-- Start: Text -->
+                <div class="col-md-6 col-lg-5 col-xl-5 offset-lg-1" style="
+              background-color: rgba(78, 70, 70, 0.87);
+              margin-top: 80px;
+              margin-left: 25px;
+              margin-right: auto;
+              padding-right: 0px;
+            ">
+                    <h1 style="
+                margin-top: 25px;
+                margin-bottom: 25px;
+                color: rgb(252, 252, 252);
+                font-size: 52px;
+              ">
+                        Disperse Dyes
+                    </h1>
+                    <p style="width: 96%;
+                color: rgb(255, 253, 253);
+                margin-bottom: 25px;
+                height: auto;
+              ">
+                        Texman Established in 2015, began its operations in Guangdong Province, China, our headquarters
+                        locatedin Dongguan City. Over the years, we've made strategic investments in the textile
+                        industry, specializing inTextile Dyes manufacturing while our factory is located in Jiangsu
+                        Province.At Texman, we prioritize quality above all else. To ensure the highest standards, our
+                        dedicated and technicallyproficient team oversees and audits every step of the production
+                        process. We firmly believe in a "Quality first'policy, maintaining the reputation of our brand.
+                    </p>
+
+                </div>
+                <!-- End: Text -->
+            </div>
+        </div>
+        <!-- End: Header -->
+    </div>
+    <!-- End: NMDIGbanner -->
+
+
+    <div class="col-md-12" style="padding-top: 10px">
+        <!-- Start: PS Cinel cursos heading -->
+        <h1 class="section-heading bg-light" style="color: #68c2b9">
+            Textile Dyes
+        </h1>
+        <h4 style="width: 100%; color: aliceblue">
+            <!-- Amacrone Series  -->
+        </h4>
+        <!-- <h1 class="display-3 text-uppercase" style="padding-right: 10px;padding-bottom: 10px;">CINEL cursos</h1> -->
+        <hr />
+        <!-- End: PS Cinel cursos heading -->
+        <!-- <hr > -->
+
+        <div class="container-md">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <ul class="nav nav-tabs tabs-left sideways">
+
+                        <li class="active">
+                            <a href="#home-v" style="border-radius: 8px" data-toggle="tab">Amacrone EXWN </a>
+                        </li>
+                        <li>
+                            <a href="#profile-v" style="border-radius: 8px" data-toggle="tab">Amacrone H/ENF Disperse Dyes </a>
+                        </li>
+
+                        <li>
+                            <a href="#reactiv-v" style="border-radius: 8px" data-toggle="tab">Amacrone E-Type Trichromatric Combination</a>
+                        </li>
+                        <li>
+                            <a href="#disperse-v" style="border-radius: 8px" data-toggle="tab">
+                                Amacrone S Type Trichromatric Combination</a>
+                        </li>
+                        <li>
+                            <a href="#HS-Series" style="border-radius: 8px" data-toggle="tab">
+                                Amacrone Luminous Disperse Dyes</a>
+                        </li>
+                        <li>
+                            <a href="#series-v" style="border-radius: 8px" data-toggle="tab">Amacrone Supplimantry Dyes
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#BI-D" style="border-radius: 8px" data-toggle="tab">Our Mission</a>
+                        </li> -->
+                       
+                        <li><a href="#texman" style="border-radius:8px;" data-toggle="tab">
+
+                            TEXMAN
+                            Green & Certified Chemistry
+                        </a>
+                    </li>
+
+                        <br><br><br><br> <br><br><br><br>
+                    </ul>
+                </div>
+                <!-- second column ------------------------======  -->
+                <div class="col-sm-4 col-lg-4 col-xs-12">
+                    <div class="tab-content" style="padding-top: 10px">
+                        <div class="tab-pane active" id="home-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #68c2b9;
+                  ">
+                               Amacrone EXWN Series for Economical High Fastness
+                            </h4>
+
+                           
+                            <img src="./assets/img/Dispers img/Amacron EXWN .png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+                                <br>
+                                
+
+                        </div>
+
+                        <!-- second 2 img============  -->
+                        <div class="tab-pane" id="profile-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color:#68c2b9;
+                  ">
+                              Amacrone H/ENF Disperse Dyes
+                            </h4>
+
+                            <img src="./assets/img/Dispers img/Amacrone ENF.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Dyes product image"
+                                class="img-responsive" />
+
+                        </div>
+                        <!-- 3rd ================  -->
+                        <div class="tab-pane" id="reactiv-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #68c2b9;
+                  ">Amacrone E-Type Trichromatric Combination
+                            </h4>
+                            <img src="./assets/img/Dispers img/amacrone E TYPE AND S.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Reactiv Dyes image"
+                                class="img-responsive" />
+                        </div>
+
+
+                        <!-- 4th ==============================  -->
+                        <div class="tab-pane" id="disperse-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #68c2b9;
+                  ">
+                               Amacrone S Type Trichromatric Combination
+                            </h4>
+                            <img src="./assets/img/Dispers img/amacrone TYPE  S 00.png "
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Disperse Dyes image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 5th ========   =================  -->
+                        <div class="tab-pane" id="HS-Series">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color:#68c2b9;
+                  ">
+                               Amacrone Luminous Disperse Dyes
+                            </h4>
+                            <img src="./assets/img/Dispers img/Amacron Luminous.png "
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Dyes image"
+                                class="img-responsive" />
+                        </div>
+
+                        <!-- 6yh medium ==================  -->
+                        <div class="tab-pane" id="series-v">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color:#68c2b9;
+                  ">
+                               Amacrone Supplimantry Dyes
+                            </h4>
+
+                            <img src="./assets/img/Dispers img/Suplimantry.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                           
+                            <h1></h1>
+                            <img src="./assets/img/Dispers img/Suplimantry1.png"
+                                style="height: auto; width: 80%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                           
+
+
+                        </div>
+
+                        <!-- 7yh BI-D ==================  -->
+                        <!-- <div class="tab-pane" id="BI-D">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #68c2b9;
+                  ">
+                              Our Mission
+                            </h4>
+                           <ul >
+                            <li>Our commitment to excellence, coupled with our expanding global footprint, positionsus as a leadingplayer in the textile industry. Thank you for considering Texman as yourtrusted partner.</li>
+                           </ul>
+                           
+                            <img src="./assets/img/Dispers img/our mission.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                                
+                        </div> -->
+
+                        <!-- 8yh ==================  -->
+                        <div class="tab-pane" id="texman">
+                            <h4 style="
+                    color: rgb(246, 246, 247);
+                    font-size: larger;
+                    font-weight: bold;
+                    border-radius: -47px;
+                    width: 80%;
+                    background-color: #68c2b9;
+                  ">
+                               TEXMAN
+                               Green & Certified Chemistry
+                            </h4>
+                            <img src="./assets/img/Dispers img/texman.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                        </div>
+
+                     
+
+        
+
+                    </div>
+                </div>
+
+                <!-- second div collumn -->
+                <div class="col-sm-5 col-xs-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home-v-info">
+                            <!-- <h4 >Trichromatic Combination for light Shades with High Fastnesses Properties</h4> -->
+                           
+
+
+                            <style>
+   
+                                .card {
+                               /* max-width: 300px; */
+                               border-left: 3px solid #a2d2d1;
+                               padding: 10px;
+                               margin-top: 100px;
+                               /* font-family: Arial, sans-serif; */
+                             }
+                             
+                             .section {
+                               margin-bottom: 20px;
+                             }
+                             
+                             .title {
+                               font-size: 18px;
+                               font-weight: bold;
+                               color: #37a1a2;
+                             }
+                             
+                             .subtitle {
+                               font-size: 16px;
+                               font-weight: bold;
+                               color: #37a1a2;
+                               border-bottom: 1px solid #a2d2d1;
+                               padding-bottom: 3px;
+                               margin-bottom: 5px;
+                             }
+                             
+                             .content {
+                               font-size: 14px;
+                               color: #666;
+                             }
+                             
+                             .section:last-child {
+                               margin-bottom: 0;
+                             }
+                             
+                               </style>
+                            
+                             <div class="card">
+                               <div class="icon"></div>
+                               <div class="">
+                                 <div class="title">Dyes</div>
+                                 <div class="content">Amacrone EXWN Series for Economical High Fastness</div>
+                               </div>
+                              <h1 style="padding: 1px;"></h1>
+                               <div class="">
+                                <div class="title">Application</div>
+                                <div class="content">Sports Wear</div>
+                              </div> 
+                              <h1 style="padding: 1px;"></h1>
+                              <div class="">
+                                <div class="title">Properties</div>
+                                <div class="content">Excellent wash fastness</div>
+                              </div>
+                             
+                            
+                             </div>
+                             
+                            
+
+                           
+
+                            <!-- ===========  -->
+
+                            <br />
+                           
+                        </div>
+                        <!-- 2=========================  -->
+                        <div class="tab-pane" id="profile-v-info">
+                           
+                     
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                  <div class="title">Dyes</div>
+                                  <div class="content">Amacrone H/ENF Disperse Dyes</div>
+                                </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+                                 <div class="title">Application</div>
+                                 <div class="content">Rapid Dyeing</div>
+                               </div> 
+                               <h1 style="padding: 1px;"></h1>
+                               <div class="">
+                                 <div class="title">Properties</div>
+                                 <div class="content">Excellent reproducibility and leveling</div>
+                               </div>
+                                                         
+                              </div>  
+
+
+
+                            
+                        </div>
+                        <br />
+                        <!-- 3========  -->
+                        <div class="tab-pane" id="reactiv-v-info">
+                          
+                             <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                  <div class="title">Dyes</div>
+                                  <div class="content">Amacrone E-Type Trichromatic Combination</div>
+                                </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+                                 <div class="title">Application</div>
+                                 <div class="content">Low Energy Type</div>
+                               </div> 
+                               <h1 style="padding: 1px;"></h1>
+                               <div class="">
+                                 <div class="title">Properties</div>
+                                 <div class="content">Recommended trichromatic for good leveling / migration and compatibility</div>
+                               </div>
+                                                         
+                              </div>  
+                            
+                            <h1></h1>
+                            <img src="./assets/img/Dispers img/d14.jpg"
+                            style="height: auto; width: 100%; border-radius: 10px" alt="Series image"
+                            class="img-responsive" />
+                            <!-- <ul class="arrow-list">
+                                <li>
+                                    Very good compatibility, medium and low substantivity, Low
+                                    Sensitivity forExhaustion Dyeing
+                                </li>
+                                <li>Excellent washing and rubbing fastnesses</li>
+                                <li>
+                                    Especially in the light colour Trichromatic have Excellent
+                                    reproducibility thancommodities
+                                </li>
+                                <li>Controlled Reaction hence excellent Levelling</li>
+                            </ul> -->
+                        </div>
+                        <!-- ED series========  -->
+                        <div class="tab-pane arrow-list" id="disperse-v-info">
+                            <span>
+                               
+
+                               
+                                <div class="card">
+                                    <div class="icon"></div>
+                                    <div class="">
+                                      <div class="title">Dyes</div>
+                                      <div class="content">Amacrone S Type Trichromatric Combination</div>
+                                    </div>
+                                   <h1 style="padding: 1px;"></h1>
+                                    <div class="">
+                                     <div class="title">Application</div>
+                                     <div class="content">High Energy Type</div>
+                                   </div> 
+                                   <h1 style="padding: 1px;"></h1>
+                                   <div class="">
+                                     <div class="title">Properties</div>
+                                     <div class="content">Recommended tricromatric for sublimatioin fastnessand high compatibility</div>
+                                   </div>
+                                                             
+                                  </div>  
+
+                                <br />
+
+                                
+                            </span>
+                        </div>
+                        <!-- HS series========  -->
+
+                        <div class="tab-pane" id="HS-Series-info">
+                            <!-- <span>HS-Series</span> -->
+
+                           
+                         
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                  <div class="title">Dyes</div>
+                                  <div class="content">Amacrone Luminous Disperse Dyes</div>
+                                </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+                                 <div class="title">Application</div>
+                                 <div class="content">Hight Visibility Safety Clothing</div>
+                               </div> 
+                               <h1 style="padding: 1px;"></h1>
+                               <div class="">
+                                 <div class="title">Properties</div>
+                                 <div class="content">Floricent luminous colors</div>
+                               </div>
+                                                         
+                              </div>  
+                        </div>
+                        <br />
+
+                        <!-- medium series========  -->
+                        <div class="tab-pane" id="series-v-info">
+
+                            <div class="card">
+                                <div class="icon"></div>
+                                <div class="">
+                                  <div class="title">Dyes</div>
+                                  <div class="content">Amacrone Supplimantry Dyes</div>
+                                </div>
+                               <h1 style="padding: 1px;"></h1>
+                                <div class="">
+                                 <div class="title">Application</div>
+                                 <div class="content">S /E/ SEType Dyes</div>
+                               </div> 
+                               <h1 style="padding: 1px;"></h1>
+                               <div class="">
+                                 <div class="title">Properties</div>
+                                 <div class="content">E dyes - Light shades with good leveling properties and good migration properties <br>
+                                    SE dyes - General leveling properties and good sublimation <br>
+                                    S dyes -Excellent sublimation fastness</div>
+                               </div>
+                                                         
+                              </div>  
+                           <img src="./assets/img/Dispers img/dying.png"
+                           style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                           class="img-responsive" />
+                           <h1 style="padding: 1px;"></h1>
+                           <img src="./assets/img/Dispers img/dying1.png"
+                           style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                           class="img-responsive" />
+                           <h1 style="padding: 1px;"></h1>
+
+                           <img src="./assets/img/Dispers img/d5.jpg"
+                           style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                           class="img-responsive" />
+
+                           <h1 style="padding: 1px;"></h1>
+                           <img src="./assets/img/Dispers img/d11.jpg"
+                           style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                           class="img-responsive" />
+                        </div>
+
+                        <!-- BI series== D======  -->
+                        <div class="tab-pane" id="texman-info">
+                        
+                            <div class="marquee">
+                           
+                            <img src="./assets/img/Dispers img/certificate.png"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" />
+                            <br>
+                            
+                            <!-- <h1></h1> -->
+                            <!-- <img src="./assets/img/reactiv imges/d5.jpg"
+                                style="height: auto; width: 100%; border-radius: 20px" alt="Series image"
+                                class="img-responsive" /> -->
+                        </div></div>
+
+                  
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+                var target = $(e.target).attr("href"); // activated tab
+                var targetInfo = target + "-info";
+                $(".tab-pane").removeClass("active");
+                $(target).addClass("active");
+                $(targetInfo).addClass("active");
+            });
+        });
+    </script>
+
+    <!-- end tabs =================================  -->
+    <br />
+    <section style="padding-top: 100px">
+        <div class="col-12"><br /></div>
+    </section>
+
+   <!-- footer ========================  -->
+
+    <br><br> <br><br>
+<!-- Footer with Unique ID -->
+<div class="container-fluid"></div> 
+<div class="container-fluid"></div>
+<div class="container-fluid p-0 m-0"></div>
+    <!-- Bootstrap Footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: rgb(33, 30, 59);">
+        <div class="container-fluid pt-3">
+            <div class="row text-center text-md-left m-0">
+    
+                <!-- Logo and Social Media Section -->
+                <div class="col-md-4" style="background-color: rgb(33, 30, 59);text-align: center;">
+                    <a href="./index.html">
+                        <img src="../logo bg.png" width="138px" height="auto" alt="Texman Logo" class="img-fluid mb-3 mx-auto d-block">
+                    </a>
+                    <p style="font-size: 14px;">
+                        The initial development of Dongguan Texman Textile Technology Co., Ltd. products was focused on knitted fabric dyeing.
+                    </p>
+                    <h5 class="text-light mb-4"style="font-size: 2.25rem; font-weight: bold;">Find us on social media</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                    <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Quick Links</h5>
+                    <p><a href="../index.html" class="text-white">Home</a></p>
+                    <p><a href="../certificated/certificate.html" class="text-white">Certifications</a></p>
+                    <p><a href="../index.html#about" class="text-white">Our Company</a></p>
+                    <p><a href="../index.html#contacts" class="text-white">Contact Us</a></p>
+                </div>
+    
+                <!-- Business Area Section -->
+                <div class="col-md-3" style="background-color: rgb(33, 30, 59);">
+                    <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Business Area</h5>
+                    <p><a href="../Dispers dyes/dispers.html" class="text-white">Disperse Dyes</a></p>
+                    <p><a href="../Reactive.html" class="text-white">Reactive Dyes</a></p>
+                    <p><a href="../Auxiliary/Auxiliary.html" class="text-white">Textile Auxiliaries</a></p>
+                </div>
+    
+                <!-- Sustainability Section -->
+                <div class="col-md-2" style="background-color: rgb(33, 30, 59);">
+                    <h5 class="mb-4 text-light"style="font-size: 2.25rem; font-weight: bold;">Sustainability</h5>
+                    <p><a href="../certificated/certificate.html#Quality" class="text-white">Quality Management</a></p>
+                    <p><a href="../certificated/certificate.html#Sustainability" class="text-white">Sustainability and Safety</a></p>
+                </div>
+            </div>
+    
+            <hr class="mb-4">
+    
+            <!-- Copyright Section -->
+            <div class="row align-items-center" style="background-color: rgb(33, 30, 59);">
+                <div class="col-md-12 text-center">
+                    <p style="font-size: 1.1rem;">Copyright © 2024 
+                        <a href="https://texman.net/" class="text-white font-weight-bold">TEXMAN</a> All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+
+   
+</div>
+
+<!-- social icon -------------------------------  -->
+<div class="social-icons">
+
+    <a href="https://texman.net/#" target="_blank" title="Chat with us on WeChat" class="social-icon wechat-icon">
+
+        <img src="../wecht.png" alt="WeChat Icon" class="social-img">
+        <img src="../barcode texman.png" alt="WeChat Barcode" class="tooltip-img">
+    </a>
+
+    <a href="https://api.whatsapp.com/send?phone=++8615362800214&text=Well+come+to+my+inbox" target="_blank"
+        title="Chat with us on WhatsApp" class="social-icon">
+        <img src="../watsup.png" style="border-radius: 10px;" alt="WhatsApp Icon" class="social-img">
+    </a>
+</div>
+
+<style>
+    .social-icons {
+        position: fixed;
+        right: 0;
+        top: 70%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        /* Space between icons */
+        z-index: 1000;
+        /* Ensure icons are above other content */
+    }
+
+    .social-icon {
+        position: relative;
+        display: block;
+        text-decoration: none;
+    }
+
+    .social-icon .social-img {
+        width: 56px;
+        /* Adjust to match your icon size */
+        height: 56px;
+        /* Adjust to match your icon size */
+        display: block;
+        z-index: 10;
+        /* Ensure the icon is above other elements */
+    }
+
+    .social-icon .tooltip-img {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        /* Adjust this value to position the image */
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, right 0.3s ease;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        max-width: 150px;
+        /* Adjust size as needed */
+        height: auto;
+        z-index: 20;
+        /* Ensure the tooltip is above the icon */
+    }
+
+    .social-icon.wechat-icon:hover .tooltip-img {
+        opacity: 1;
+        visibility: visible;
+        right: 20px;
+        /* Shifts image left by 20px on hover */
+    }
+</style>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.min.js?h=ee49e4b421a33c2774a60d2276cb9bf9"></script>
+</body>
+
+</html>
