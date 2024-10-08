@@ -2686,9 +2686,20 @@
 															</div>
 															<h5>Experience</h5>
 															<div class="line-box"></div>
-															<p>Since 2015, Texman has grown from knitted fabric
-																dyeing to diverse textile solutions, now expanding
-																Across the globe .</p>
+															<p>Since 2015, Texman has grown from specializing in knitted fabric dyeing to offering diverse textile solutions.
+
+																<section id="faq">
+																	<div class="faq-item">
+																	  <h6 onclick="toggleFAQ(this)">Learn more..
+																		
+																	  </h6>
+																	  <p class="faq-answer">
+																		Today, we are a main player in the textile industry, expanding our reach across the globe and delivering high-quality products to international markets.</p>
+																	</div>
+																  
+																  </section>
+
+															</p>
 														</div>
 													</div>
 												</div>
@@ -2716,6 +2727,95 @@
 
 																Texman offers prompt and reliable support,
 																ensuring quick resolutions and customer satisfaction..
+
+<section id="faq">
+	<div class="faq-item">
+	  <h6 onclick="toggleFAQ(this)">Learn more..
+		
+	  </h6>
+	  <p class="faq-answer">
+		Texman, once focused on knitted fabric dyeing, now offers diverse textile solutions. As a key player in the global textile industry, we deliver high-quality products worldwide. We're dedicated to quick support, fast resolutions, and ensuring customer satisfaction at every step.</p>
+	</div>
+  
+  </section>
+  
+  <script>
+	function toggleFAQ(element) {
+	  const answer = element.nextElementSibling;
+	  const icon = element.querySelector('.faq-icon');
+	  const isVisible = answer.style.display === "block";
+	  
+	  answer.style.display = isVisible ? "none" : "block";
+	  
+	  // Rotate the icon when clicked
+	  if (isVisible) {
+		icon.style.transform = "rotate(0deg)";
+	  } else {
+		icon.style.transform = "rotate(180deg)";
+	  }
+	}
+  </script>
+  
+  
+  <script>
+	function toggleFAQ(element) {
+	  const answer = element.nextElementSibling;
+	  const isVisible = answer.style.display === "block";
+	  answer.style.display = isVisible ? "none" : "block";
+	}
+  </script>
+  
+  
+  
+  <style>
+  
+  #faq {
+	background-color: #f4f4f9d7;
+	padding: 10px;
+	margin-top: 10px;
+  }
+  
+  #faq h2 {
+	color: #2C327C;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  
+  .faq-item {
+	margin-bottom: 15px;
+  }
+  
+  .faq-item h3 {
+	color: #333;
+	font-size: 20px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .faq-item h3:hover {
+	color: #2C327C;
+  }
+  
+  .faq-answer {
+	color: #555;
+	font-size: 12px;
+	display: none;
+	margin-top: 5px;
+  }
+  
+  /* Icon styles */
+  .faq-icon {
+	margin-left: 10px;
+	transition: transform 0.3s ease;
+  }
+  
+  </style>
+  
+																
 															</p>
 														</div>
 													</div>
@@ -3016,7 +3116,20 @@
 																<div style="font-size: medium;">We are committed to the
 																	development of innovation
 																	and technology.
-																	<br> <br><br>
+
+																	<section id="faq">
+																		<div class="faq-item">
+																		  <h6 onclick="toggleFAQ(this)">Learn more..
+																			
+																		  </h6>
+																		  <p class="faq-answer">
+																			We are deeply committed to fostering the development of innovation and technology. Our focus is to constantly evolve, harnessing the latest advancements to drive growth, efficiency, and sustainability. Through innovative approaches and cutting-edge technologies, we aim to create transformative solutions that not only meet the needs of today but also anticipate the challenges of tomorrow.
+
+																		</p>
+																		</div>
+																	  
+																	  </section>
+																	<br> <br>
 																</div>
 																<!-- <a href=""
 																	class="btn-details">
@@ -3117,7 +3230,22 @@
 																<div style="font-size: medium;"> We deeply engage with
 																	our customers, understanding
 																	their
-																	needs and aspirations <br><br> <br> <br> </div>
+																	needs and aspirations 
+																	
+																	
+																	<section id="faq">
+																		<div class="faq-item">
+																		  <h6 onclick="toggleFAQ(this)">Learn more..
+																			
+																		  </h6>
+																		  <p class="faq-answer">
+																			We are dedicated to being leaders in our industry by deeply engaging with our customers, understanding their needs and aspirations. Through this commitment, we not only meet their expectations but also anticipate future trends, driving innovation and delivering exceptional value. Our leadership is rooted in a customer-first approach, ensuring that we remain at the forefront of progress and excellence.
+
+																		</p>
+																		</div>
+																	  
+																	  </section>
+																	<br><br>  </div>
 																<!-- <a href=""
 																	class="btn-details"> LEARN
 																	MORE</a> -->
@@ -3161,7 +3289,23 @@
 																	We consider ourselves an integral part of our
 																	customers' progress
 																	and the realization of their objectives.
-																	<br><br><br>
+
+
+																	<section id="faq">
+																		<div class="faq-item">
+																		  <h6 onclick="toggleFAQ(this)">Learn more..
+																			
+																		  </h6>
+																		  <p class="faq-answer">
+																			We consider ourselves an essential part of our customers' progress and the realization of their objectives. By partnering closely with them, we align our strategies with their goals, ensuring that our contributions are key drivers in their success. Our commitment is to provide the support and solutions that empower our customers to achieve their aspirations and thrive in their respective industries.
+
+
+
+																		</p>
+																		</div>
+																	  
+																	  </section>
+																	<br>
 																</div>
 																<!-- <a href="https://texman.net/#"/ocm-connectivity/"
 																	class="btn-details">
@@ -3206,10 +3350,24 @@
 															<div class="content-box">
 																<h5>OUR VALUES &
 																	CERTIFICATIONS</h5>
-																<div style="font-size: medium;">Our aim is to offer our
-																	customers comprehensive
-																	solutions for textile dyeing and finishing products.
-																	<br><br>
+																<div style="font-size: medium;">Our aim is to offer our customers comprehensive solutions for textile dyeing and finishing products, driven..
+
+
+
+																	<section id="faq">
+																		<div class="faq-item">
+																		  <h6 onclick="toggleFAQ(this)">Learn more..
+																			
+																		  </h6>
+																		  <p class="faq-answer">
+																			by our core values of quality, innovation, and sustainability. We are proud to uphold industry-leading certifications that reflect our commitment to excellence and environmental responsibility. These certifications not only ensure that we meet the highest standards but also reinforce our dedication to providing our customers with products that they can trust, helping them succeed in an increasingly competitive market.
+
+
+																		</p>
+																		</div>
+																	  
+																	  </section>
+																	
 																</div>
 																<!-- <a href="https://texman.net/#"oncology-appointment-and-treatment-care-management-system/"
 																	class="btn-details">
